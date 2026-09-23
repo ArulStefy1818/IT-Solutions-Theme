@@ -769,36 +769,187 @@ img {
    LOGOUT
 ========================================================= */
 
+/* =========================================================
+   STACKLY ADMIN - LOGOUT BUTTON
+========================================================= */
+
 .stackly-admin-logout {
 
-    display: flex;
+    position: relative;
 
+    display: flex;
     align-items: center;
 
     gap: 12px;
 
-    padding: 13px;
+    padding: 13px 15px;
 
     border-radius: 11px;
 
-    color: var(--stackly-it-muted);
+    color: var(--stackly-it-danger);
+
+    background: rgba(255, 104, 104, 0.06);
+
+    border: 1px solid transparent;
 
     font-size: 14px;
-
     font-weight: 600;
 
-    transition: var(--stackly-transition);
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        color .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
 
 
+/* Animated Shine */
+
+.stackly-admin-logout::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    transform: skewX(-25deg);
+
+    transition: left .6s ease;
+
+}
+
+
+/* Hover */
+
 .stackly-admin-logout:hover {
 
-    color: var(--stackly-it-danger);
+    color: #ffffff;
 
-    background: rgba(255,104,104,0.06);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 82, 82, .18),
+            rgba(255, 104, 104, .08)
+        );
 
-    transform: translateX(4px);
+    border-color:
+        rgba(255, 104, 104, .35);
+
+    transform:
+        translateX(5px)
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 70, 70, .16),
+        0 0 18px rgba(255, 70, 70, .08);
+
+}
+
+
+/* Shine Animation */
+
+.stackly-admin-logout:hover::before {
+
+    left: 130%;
+
+}
+
+
+/* Icon */
+
+.stackly-admin-logout i {
+
+    width: 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    transition:
+        transform .35s ease,
+        color .35s ease;
+
+}
+
+
+/* Icon Hover */
+
+.stackly-admin-logout:hover i {
+
+    color: #ffffff;
+
+    transform:
+        translateX(3px)
+        rotate(-8deg)
+        scale(1.15);
+
+}
+
+
+/* Click Effect */
+
+.stackly-admin-logout:active {
+
+    transform:
+        translateX(3px)
+        translateY(0)
+        scale(.97);
+
+    box-shadow:
+        0 4px 12px rgba(255, 70, 70, .12);
+
+}
+
+
+/* Keyboard Focus */
+
+.stackly-admin-logout:focus-visible {
+
+    outline: none;
+
+    border-color:
+        var(--stackly-it-danger);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 104, 104, .15),
+        0 0 20px
+        rgba(255, 104, 104, .12);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .stackly-admin-logout:hover {
+
+        transform: translateY(-2px);
+
+    }
 
 }
 
