@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Dashboard for managing projects, services, messages and account information.">
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>Client Account</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Active Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <!-- INVOICES -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <!-- DOCUMENTS -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+ 
+
+            <!-- SETTINGS -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+ 
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                       <strong>
+            Client Account
+        </strong>
+
+        <span id="stacklyClientEmail">
+            Loading...
+        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+                <!-- =========================================================
+             CLIENT SERVICES PAGE CONTENT
+        ========================================================== -->
+
+        <div class="stackly-client-services-content">
+
+
+            <!-- =====================================================
+                 SERVICES HERO / INTRO
+            ====================================================== -->
+
+            <section
+                class="stackly-service-intro-panel"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+                <div class="stackly-service-intro-copy">
+
+                    <span class="stackly-service-intro-tag">
+                        <i class="fa-solid fa-sparkles"></i>
+                        DIGITAL SOLUTIONS
+                    </span>
+
+                    <h2>
+                        Services built around
+                        <strong>your business.</strong>
+                    </h2>
+
+                    <p>
+                        Explore the digital services available through Stackly.
+                        From websites and applications to marketing and ongoing
+                        technology support, manage everything from one place.
+                    </p>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-service-intro-button">
+
+                        Discuss a Service
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-service-intro-art">
+
+                    <div class="stackly-service-art-ring ring-a"></div>
+
+                    <div class="stackly-service-art-ring ring-b"></div>
+
+                    <div class="stackly-service-art-core">
+
+                        <i class="fa-solid fa-cubes-stacked"></i>
+
+                    </div>
+
+                    <span class="stackly-service-art-dot dot-a"></span>
+                    <span class="stackly-service-art-dot dot-b"></span>
+                    <span class="stackly-service-art-dot dot-c"></span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 SERVICE OVERVIEW
+            ====================================================== -->
+
+            <section
+                class="stackly-service-overview-grid"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-service-overview-card">
+
+                    <div class="stackly-service-overview-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+                        <span>ACTIVE SERVICES</span>
+
+                        <strong>04</strong>
+
+                        <p>
+                            Services currently connected to your account.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-service-overview-card">
+
+                    <div class="stackly-service-overview-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <div>
+                        <span>AVAILABLE SOLUTIONS</span>
+
+                        <strong>12+</strong>
+
+                        <p>
+                            Technology and digital solutions available.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-service-overview-card">
+
+                    <div class="stackly-service-overview-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <span>CLIENT SUPPORT</span>
+
+                        <strong>24/7</strong>
+
+                        <p>
+                            Get assistance whenever your project needs it.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 ACTIVE SERVICES
+            ====================================================== -->
+
+            <section
+                class="stackly-active-services-zone"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-services-zone-heading">
+
+                    <div>
+
+                        <span>
+                            YOUR SERVICES
+                        </span>
+
+                        <h2>
+                            Services currently
+                            <strong>in progress.</strong>
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-services-heading-link">
+
+                        Request Service
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="stackly-active-services-grid">
+
+
+                    <!-- SERVICE CARD 01 -->
+
+                    <article class="stackly-active-service-card">
+
+                        <div class="stackly-active-service-top">
+
+                            <div class="stackly-active-service-icon">
+
+                                <i class="fa-solid fa-globe"></i>
+
+                            </div>
+
+                            <span class="stackly-active-service-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Website Development
+                        </h3>
+
+                        <p>
+                            Professional responsive website development
+                            with modern UI, performance optimization and
+                            mobile compatibility.
+                        </p>
+
+                        <div class="stackly-service-progress-info">
+
+                            <span>
+                                Project Progress
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-service-progress-bar">
+
+                            <span style="width:78%;"></span>
+
+                        </div>
+
+                        <div class="stackly-service-card-bottom">
+
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                Due Sep 30, 2026
+                            </span>
+
+                            <a href="404-client.html">
+                                View
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE CARD 02 -->
+
+                    <article class="stackly-active-service-card">
+
+                        <div class="stackly-active-service-top">
+
+                            <div class="stackly-active-service-icon">
+
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            </div>
+
+                            <span class="stackly-active-service-status">
+                                IN PROGRESS
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Mobile Application Development
+                        </h3>
+
+                        <p>
+                            Scalable mobile application development focused
+                            on smooth user experiences and reliable
+                            performance.
+                        </p>
+
+                        <div class="stackly-service-progress-info">
+
+                            <span>
+                                Project Progress
+                            </span>
+
+                            <strong>
+                                56%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-service-progress-bar">
+
+                            <span style="width:56%;"></span>
+
+                        </div>
+
+                        <div class="stackly-service-card-bottom">
+
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                Due Oct 18, 2026
+                            </span>
+
+                            <a href="404-client.html">
+                                View
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE CARD 03 -->
+
+                    <article class="stackly-active-service-card">
+
+                        <div class="stackly-active-service-top">
+
+                            <div class="stackly-active-service-icon">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                            </div>
+
+                            <span class="stackly-active-service-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Digital Marketing Strategy
+                        </h3>
+
+                        <p>
+                            Strategic digital campaigns designed to improve
+                            visibility, engagement and measurable business
+                            growth.
+                        </p>
+
+                        <div class="stackly-service-progress-info">
+
+                            <span>
+                                Campaign Progress
+                            </span>
+
+                            <strong>
+                                91%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-service-progress-bar">
+
+                            <span style="width:91%;"></span>
+
+                        </div>
+
+                        <div class="stackly-service-card-bottom">
+
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                Due Oct 05, 2026
+                            </span>
+
+                            <a href="404-client.html">
+                                View
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 SERVICE CATEGORIES
+            ====================================================== -->
+
+            <section
+                class="stackly-service-category-section"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-category-heading">
+
+                    <span>
+                        EXPLORE CAPABILITIES
+                    </span>
+
+                    <h2>
+                        What can we build
+                        <strong>for you?</strong>
+                    </h2>
+
+                    <p>
+                        Extend your current project with additional
+                        technology, creative and growth services.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-category-grid">
+
+
+                    <!-- CATEGORY 01 -->
+
+                    <div class="stackly-category-card">
+
+                        <div class="stackly-category-number">
+                            01
+                        </div>
+
+                        <div class="stackly-category-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <h3>
+                            Web Solutions
+                        </h3>
+
+                        <p>
+                            Corporate websites, landing pages, e-commerce platforms and web systems.
+                        </p>
+
+                        <div class="stackly-category-tags">
+
+                            <span>UI/UX</span>
+                            <span>Frontend</span>
+                            <span>Backend</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CATEGORY 02 -->
+
+                    <div class="stackly-category-card">
+
+                        <div class="stackly-category-number">
+                            02
+                        </div>
+
+                        <div class="stackly-category-icon">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+
+                        <h3>
+                            App Development
+                        </h3>
+
+                        <p>
+                            Modern mobile applications designed for
+                            performance, scalability and usability.
+                        </p>
+
+                        <div class="stackly-category-tags">
+
+                            <span>Android</span>
+                            <span>iOS</span>
+                            <span>API</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CATEGORY 03 -->
+
+                    <div class="stackly-category-card">
+
+                        <div class="stackly-category-number">
+                            03
+                        </div>
+
+                        <div class="stackly-category-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <h3>
+                            Digital Growth
+                        </h3>
+
+                        <p>
+                            Digital marketing strategies that connect
+                            brands with the right audiences.
+                        </p>
+
+                        <div class="stackly-category-tags">
+
+                            <span>SEO</span>
+                            <span>Ads</span>
+                            <span>Social</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CATEGORY 04 -->
+
+                    <div class="stackly-category-card">
+
+                        <div class="stackly-category-number">
+                            04
+                        </div>
+
+                        <div class="stackly-category-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+
+                        <h3>
+                            Creative Design
+                        </h3>
+
+                        <p>
+                            Brand identity, visual systems and creative
+                            experiences built around your business.
+                        </p>
+
+                        <div class="stackly-category-tags">
+
+                            <span>Branding</span>
+                            <span>Graphics</span>
+                            <span>Creative</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 SERVICE PROCESS
+            ====================================================== -->
+
+            <section
+                class="stackly-service-process-section"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-process-heading">
+
+                    <span>
+                        HOW WE WORK
+                    </span>
+
+                    <h2>
+                        A simple process.
+                        <strong>Clear results.</strong>
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-process-track">
+
+
+                    <div class="stackly-process-step">
+
+                        <div class="stackly-process-step-number">
+                            01
+                        </div>
+
+                        <div class="stackly-process-step-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <h3>
+                            Discover
+                        </h3>
+
+                        <p>
+                            We understand your goals, requirements
+                            and business challenges.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stackly-process-line"></div>
+
+
+
+                    <div class="stackly-process-step">
+
+                        <div class="stackly-process-step-number">
+                            02
+                        </div>
+
+                        <div class="stackly-process-step-icon">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+
+                        <h3>
+                            Plan
+                        </h3>
+
+                        <p>
+                            Our team creates a clear roadmap and
+                            solution strategy for your project.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stackly-process-line"></div>
+
+
+
+                    <div class="stackly-process-step">
+
+                        <div class="stackly-process-step-number">
+                            03
+                        </div>
+
+                        <div class="stackly-process-step-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <h3>
+                            Build
+                        </h3>
+
+                        <p>
+                            Designers and developers transform the
+                            plan into a working digital solution.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stackly-process-line"></div>
+
+
+
+                    <div class="stackly-process-step">
+
+                        <div class="stackly-process-step-number">
+                            04
+                        </div>
+
+                        <div class="stackly-process-step-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+
+                        <h3>
+                            Launch
+                        </h3>
+
+                        <p>
+                            We test, refine and prepare your solution
+                            for a successful launch.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 SERVICE BENEFITS
+            ====================================================== -->
+
+            <section
+                class="stackly-service-benefits-section"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-benefits-visual">
+
+                    <div class="stackly-benefits-circle">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <span class="benefit-orbit orbit-one"></span>
+                    <span class="benefit-orbit orbit-two"></span>
+
+                </div>
+
+
+                <div class="stackly-benefits-content">
+
+                    <span>
+                        WHY STACKLY
+                    </span>
+
+                    <h2>
+                        More than a service.
+                        <strong>A long-term partner.</strong>
+                    </h2>
+
+                    <p>
+                        Our approach combines technology, communication
+                        and continuous improvement to keep your digital
+                        presence moving forward.
+                    </p>
+
+
+                    <div class="stackly-benefit-list">
+
+                        <div class="stackly-benefit-item">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <h3>
+                                    Transparent Progress
+                                </h3>
+
+                                <p>
+                                    Stay informed about project progress,
+                                    milestones and upcoming work.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-benefit-item">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <h3>
+                                    Dedicated Support
+                                </h3>
+
+                                <p>
+                                    Communicate directly with the team
+                                    whenever you need assistance.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-benefit-item">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <h3>
+                                    Scalable Solutions
+                                </h3>
+
+                                <p>
+                                    Expand your digital services as your
+                                    business and requirements grow.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 SERVICE REQUEST PANEL
+            ====================================================== -->
+
+            <section
+                class="stackly-service-request-panel"
+                data-aos="zoom-in"
+                data-aos-duration="900">
+
+                <div class="stackly-request-decoration">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="stackly-request-icon">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </div>
+
+
+                <div class="stackly-request-content">
+
+                    <span>
+                        NEED SOMETHING NEW?
+                    </span>
+
+                    <h2>
+                        Have a new project
+                        <strong>in mind?</strong>
+                    </h2>
+
+                    <p>
+                        Tell our team what you need and we'll help
+                        you identify the right solution.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="404-client.html"
+                    class="stackly-request-button">
+
+                    Start a Conversation
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 QUICK SERVICE LINKS
+            ====================================================== -->
+
+            <section
+                class="stackly-service-quick-links"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+                <div class="stackly-quick-link-card">
+
+                    <div class="stackly-quick-link-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <div>
+                        <span>PROJECTS</span>
+
+                        <h3>
+                            Track your projects
+                        </h3>
+                    </div>
+
+                    <a href="404-client.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-quick-link-card">
+
+                    <div class="stackly-quick-link-icon">
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+
+                    <div>
+                        <span>COMMUNICATION</span>
+
+                        <h3>
+                            Talk to our team
+                        </h3>
+                    </div>
+
+                    <a href="404-client.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-quick-link-card">
+
+                    <div class="stackly-quick-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <span>DOCUMENTS</span>
+
+                        <h3>
+                            View project files
+                        </h3>
+                    </div>
+
+                    <a href="404-client.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+</main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         ADMIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+   
+
+</body>

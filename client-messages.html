@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Dashboard for managing projects, services, messages and account information.">
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>Client Account</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Active Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <!-- INVOICES -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <!-- DOCUMENTS -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+ 
+
+            <!-- SETTINGS -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+ 
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                       <strong>
+            Client Account
+        </strong>
+
+        <span id="stacklyClientEmail">
+            Loading...
+        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+                <!-- =====================================================
+             MESSAGES PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-message-center">
+
+
+            <!-- =================================================
+                 MESSAGE HERO
+            ================================================== -->
+
+            <section
+                class="stackly-message-hero"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-message-hero-content">
+
+                    <span class="stackly-message-eyebrow">
+                        <i class="fa-solid fa-comments"></i>
+                        CLIENT COMMUNICATION
+                    </span>
+
+                    <h2>
+                        Stay connected with
+                        <strong>your team.</strong>
+                    </h2>
+
+                    <p>
+                        Communicate with our project specialists,
+                        share updates, ask questions and keep every
+                        important conversation in one place.
+                    </p>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-message-primary-action">
+
+                        <span>View Conversations</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="stackly-message-hero-visual">
+
+                    <div class="stackly-message-orbit orbit-one"></div>
+
+                    <div class="stackly-message-orbit orbit-two"></div>
+
+                    <div class="stackly-message-orbit orbit-three"></div>
+
+                    <div class="stackly-message-center-icon">
+
+                        <i class="fa-solid fa-message"></i>
+
+                    </div>
+
+                    <span class="stackly-message-floating-icon floating-one">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </span>
+
+                    <span class="stackly-message-floating-icon floating-two">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+
+                    <span class="stackly-message-floating-icon floating-three">
+                        <i class="fa-solid fa-user-group"></i>
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMMUNICATION STATUS
+            ================================================== -->
+
+            <section
+                class="stackly-message-status-grid"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-message-status-card">
+
+                    <div class="stackly-message-status-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+
+                    <div class="stackly-message-status-content">
+
+                        <span>
+                            UNREAD MESSAGES
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square stackly-status-arrow"></i>
+
+                </div>
+
+
+                <div class="stackly-message-status-card">
+
+                    <div class="stackly-message-status-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div class="stackly-message-status-content">
+
+                        <span>
+                            ACTIVE THREADS
+                        </span>
+
+                        <strong>
+                            04
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square stackly-status-arrow"></i>
+
+                </div>
+
+
+                <div class="stackly-message-status-card">
+
+                    <div class="stackly-message-status-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div class="stackly-message-status-content">
+
+                        <span>
+                            AVG. RESPONSE
+                        </span>
+
+                        <strong>
+                            2h
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square stackly-status-arrow"></i>
+
+                </div>
+
+
+                <div class="stackly-message-status-card">
+
+                    <div class="stackly-message-status-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div class="stackly-message-status-content">
+
+                        <span>
+                            SUPPORT STATUS
+                        </span>
+
+                        <strong>
+                            Online
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-circle stackly-live-dot"></i>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 IMPORTANT ANNOUNCEMENT
+            ================================================== -->
+
+            <section
+                class="stackly-message-announcement"
+                data-aos="fade-right"
+                data-aos-duration="1000">
+
+                <div class="stackly-announcement-symbol">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div class="stackly-announcement-content">
+
+                    <span>
+                        PROJECT UPDATE
+                    </span>
+
+                    <h3>
+                        Website development milestone is ready for review.
+                    </h3>
+
+                    <p>
+                        The latest homepage and responsive improvements
+                        are now available for your feedback.
+                    </p>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-announcement-link">
+
+                    Review Project
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONVERSATION AREA
+            ================================================== -->
+
+            <section
+                class="stackly-conversation-wrapper"
+                id="stacklyConversationArea">
+
+                <!-- CONVERSATION HEADER -->
+
+                <div
+                    class="stackly-conversation-heading"
+                    data-aos="fade-up"
+                    data-aos-duration="900">
+
+                    <div>
+
+                        <span>
+                            YOUR CONVERSATIONS
+                        </span>
+
+                        <h2>
+                            Recent messages
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-conversation-new">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        New Message
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONVERSATION LIST -->
+
+                <div class="stackly-conversation-list">
+
+
+                    <!-- CONVERSATION 01 -->
+
+                    <article
+                        class="stackly-conversation-card unread"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <div class="stackly-conversation-avatar">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <div class="stackly-conversation-main">
+
+                            <div class="stackly-conversation-top">
+
+                                <h3>
+                                    Website Development
+                                </h3>
+
+                                <time>
+                                    10 min ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                The development team has completed
+                                the latest responsive layout updates.
+                            </p>
+
+                            <div class="stackly-conversation-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Development Team
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-circle"></i>
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="stackly-unread-count">
+                            2
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-conversation-open"
+                            aria-label="Open conversation">
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- CONVERSATION 02 -->
+
+                    <article
+                        class="stackly-conversation-card unread"
+                        data-aos="fade-up"
+                        data-aos-delay="180">
+
+                        <div class="stackly-conversation-avatar">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        </div>
+
+                        <div class="stackly-conversation-main">
+
+                            <div class="stackly-conversation-top">
+
+                                <h3>
+                                    Mobile Application Development
+                                </h3>
+
+                                <time>
+                                    1 hour ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                Beta testing preparation has started.
+                                Please review the latest project update.
+                            </p>
+
+                            <div class="stackly-conversation-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    App Team
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-circle"></i>
+                                    In Progress
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="stackly-unread-count">
+                            1
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-conversation-open"
+                            aria-label="Open conversation">
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- CONVERSATION 03 -->
+
+                    <article
+                        class="stackly-conversation-card"
+                        data-aos="fade-up"
+                        data-aos-delay="260">
+
+                        <div class="stackly-conversation-avatar">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <div class="stackly-conversation-main">
+
+                            <div class="stackly-conversation-top">
+
+                                <h3>
+                                    Digital Marketing Strategy
+                                </h3>
+
+                                <time>
+                                    Yesterday
+                                </time>
+
+                            </div>
+
+                            <p>
+                                Your monthly campaign performance report
+                                has been added to the project documents.
+                            </p>
+
+                            <div class="stackly-conversation-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Marketing Team
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                    Updated
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-conversation-open"
+                            aria-label="Open conversation">
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- CONVERSATION 04 -->
+
+                    <article
+                        class="stackly-conversation-card"
+                        data-aos="fade-up"
+                        data-aos-delay="340">
+
+                        <div class="stackly-conversation-avatar">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+                        <div class="stackly-conversation-main">
+
+                            <div class="stackly-conversation-top">
+
+                                <h3>
+                                    Creative Design
+                                </h3>
+
+                                <time>
+                                    Sep 20, 2026
+                                </time>
+
+                            </div>
+
+                            <p>
+                                Brand asset revisions have been completed
+                                and are ready for your approval.
+                            </p>
+
+                            <div class="stackly-conversation-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Creative Team
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-check-double"></i>
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-conversation-open"
+                            aria-label="Open conversation">
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTACT CHANNELS
+            ================================================== -->
+
+            <section
+                class="stackly-contact-channel-section"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-contact-channel-heading">
+
+                    <span>
+                        CONNECT WITH US
+                    </span>
+
+                    <h2>
+                        Choose how you want to communicate.
+                    </h2>
+
+                    <p>
+                        Reach the right team through your preferred
+                        communication channel.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-contact-channel-grid">
+
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-contact-channel-card">
+
+                        <div class="stackly-channel-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Project Chat
+                            </h3>
+
+                            <p>
+                                Discuss project updates directly
+                                with your assigned team.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right stackly-channel-arrow"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-contact-channel-card">
+
+                        <div class="stackly-channel-icon">
+                            <i class="fa-solid fa-file-arrow-up"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Share Documents
+                            </h3>
+
+                            <p>
+                                Send project files, references and
+                                important business documents.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right stackly-channel-arrow"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-contact-channel-card">
+
+                        <div class="stackly-channel-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Support Team
+                            </h3>
+
+                            <p>
+                                Get assistance with account or
+                                technical questions.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right stackly-channel-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMMUNICATION TIMELINE
+            ================================================== -->
+
+            <section
+                class="stackly-communication-history"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-history-heading">
+
+                    <span>
+                        COMMUNICATION HISTORY
+                    </span>
+
+                    <h2>
+                        Recent activity
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-history-track">
+
+
+                    <div class="stackly-history-item">
+
+                        <div class="stackly-history-marker">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+
+                        <div class="stackly-history-info">
+
+                            <strong>
+                                New message received
+                            </strong>
+
+                            <p>
+                                Development Team sent an update
+                                regarding your website.
+                            </p>
+
+                            <time>
+                                Today · 09:42 AM
+                            </time>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-history-item">
+
+                        <div class="stackly-history-marker">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div class="stackly-history-info">
+
+                            <strong>
+                                Project document uploaded
+                            </strong>
+
+                            <p>
+                                A new project document was added
+                                to your documents area.
+                            </p>
+
+                            <time>
+                                Yesterday · 04:18 PM
+                            </time>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-history-item">
+
+                        <div class="stackly-history-marker">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="stackly-history-info">
+
+                            <strong>
+                                Task completed
+                            </strong>
+
+                            <p>
+                                Homepage responsive optimization
+                                was marked as completed.
+                            </p>
+
+                            <time>
+                                Sep 20, 2026 · 11:25 AM
+                            </time>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESPONSE INFORMATION
+            ================================================== -->
+
+            <section
+                class="stackly-response-banner"
+                data-aos="zoom-in"
+                data-aos-duration="900">
+
+                <div class="stackly-response-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <div class="stackly-response-copy">
+
+                    <span>
+                        FAST CLIENT SUPPORT
+                    </span>
+
+                    <h2>
+                        Need a quick response?
+                    </h2>
+
+                    <p>
+                        Send us a message and our team will get back
+                        to you as soon as possible.
+                    </p>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-response-button">
+
+                    Start Conversation
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NEW MESSAGE CTA
+            ================================================== -->
+
+            <section
+                class="stackly-new-message-area"
+                id="stacklyNewMessage"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-new-message-decoration"></div>
+
+                <div class="stackly-new-message-content">
+
+                    <div class="stackly-new-message-icon">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            HAVE SOMETHING TO SAY?
+                        </span>
+
+                        <h2>
+                            Start a new conversation.
+                        </h2>
+
+                        <p>
+                            Tell us what you need and connect with
+                            the right Stackly team.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-new-message-button">
+
+                    <span>
+                        Send Message
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+</main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         ADMIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+   
+
+</body>

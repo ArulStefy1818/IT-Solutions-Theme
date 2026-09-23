@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Dashboard for managing projects, services, messages and account information.">
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>Client Account</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Active Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <!-- INVOICES -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <!-- DOCUMENTS -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+ 
+
+            <!-- SETTINGS -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+ 
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                       <strong>
+            Client Account
+        </strong>
+
+        <span id="stacklyClientEmail">
+            Loading...
+        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+ 
+    <!-- =====================================================
+         SETTINGS CONTENT
+    ====================================================== -->
+
+    <div class="stackly-settings-content">
+
+
+        <!-- =================================================
+             SETTINGS INTRO
+        ================================================== -->
+
+        <section
+            class="stackly-settings-intro"
+            data-aos="fade-up"
+            data-aos-duration="900">
+
+            <div class="stackly-settings-intro-copy">
+
+                <span class="stackly-settings-kicker">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                    ACCOUNT CONTROL CENTER
+
+                </span>
+
+                <h2>
+                    Manage your
+                    <span>client experience.</span>
+                </h2>
+
+                <p>
+                    Update your account information, communication
+                    preferences, security options and portal
+                    experience from one place.
+                </p>
+
+            </div>
+
+
+            <div class="stackly-settings-intro-status">
+
+                <div class="stackly-settings-status-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        ACCOUNT STATUS
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                    <small>
+                        Last updated today
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+<!-- =================================================
+     PROFILE SETTINGS
+================================================= -->
+
+<section
+    class="stackly-profile-control-panel"
+    data-aos="fade-up"
+    data-aos-duration="1000">
+
+    <div class="stackly-settings-section-title">
+
+        <div>
+
+            <span>
+                PERSONAL INFORMATION
+            </span>
+
+            <h2>
+                Profile details
+            </h2>
+
+        </div>
+
+        <span class="stackly-settings-edit-label">
+            <i class="fa-solid fa-pen"></i>
+            Editable
+        </span>
+
+    </div>
+
+
+    <div class="stackly-profile-layout">
+
+
+        <!-- PROFILE CARD -->
+
+        <div class="stackly-profile-identity">
+
+            <div class="stackly-profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span class="stackly-profile-online"></span>
+
+            </div>
+
+            <h3 id="stacklySettingsUserName">
+                Client Account
+            </h3>
+
+            <p>
+                Active Client
+            </p>
+
+            <span class="stackly-profile-member">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                Client since 2026
+
+            </span>
+
+        </div>
+
+
+        <!-- PROFILE FORM -->
+
+        <div class="stackly-profile-fields">
+
+
+            <!-- DISPLAY NAME -->
+
+            <div class="stackly-settings-field">
+
+                <label>
+                    Display Name
+                </label>
+
+                <div class="stackly-settings-input">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="stacklySettingsDisplayName"
+                        placeholder="Enter your name">
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="stackly-settings-field">
+
+                <label>
+                    Email Address
+                </label>
+
+                <div class="stackly-settings-input">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="stacklySettingsEmail"
+                        value=""
+                        placeholder="Enter your email">
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT ROLE -->
+
+            <div class="stackly-settings-field">
+
+                <label>
+                    Account Role
+                </label>
+
+                <div class="stackly-settings-input">
+
+                    <i class="fa-solid fa-id-badge"></i>
+
+                    <input
+                        type="text"
+                        value="Client"
+                        readonly>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div class="stackly-settings-field">
+
+                <label>
+                    Company / Organization
+                </label>
+
+                <div class="stackly-settings-input">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <input
+                        type="text"
+                        id="stacklySettingsCompany"
+                        value="Your Organization"
+                        placeholder="Company name">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FORM ACTIONS -->
+
+    <div class="stackly-settings-form-actions">
+
+        <button
+            type="button"
+            class="stackly-settings-save-btn">
+
+            <i class="fa-solid fa-check"></i>
+
+            Save Profile
+
+        </button>
+
+        <button
+            type="button"
+            class="stackly-settings-reset-btn">
+
+            Cancel
+
+        </button>
+
+    </div>
+
+</section>
+
+        <!-- =================================================
+             PREFERENCE CARDS
+        ================================================== -->
+
+        <section
+            class="stackly-preference-zone"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-settings-section-title">
+
+                <div>
+
+                    <span>
+                        PORTAL PREFERENCES
+                    </span>
+
+                    <h2>
+                        Customize your workspace
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-preference-grid">
+
+
+                <!-- EMAIL NOTIFICATIONS -->
+
+                <div class="stackly-preference-card">
+
+                    <div class="stackly-preference-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+                    <div class="stackly-preference-copy">
+
+                        <h3>
+                            Email notifications
+                        </h3>
+
+                        <p>
+                            Receive updates about projects,
+                            invoices and important account activity.
+                        </p>
+
+                    </div>
+
+                    <label class="stackly-toggle-control">
+
+                        <input
+                            type="checkbox"
+                            checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- PROJECT UPDATES -->
+
+                <div class="stackly-preference-card">
+
+                    <div class="stackly-preference-icon">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+                    <div class="stackly-preference-copy">
+
+                        <h3>
+                            Project updates
+                        </h3>
+
+                        <p>
+                            Get notified when milestones,
+                            tasks or project statuses change.
+                        </p>
+
+                    </div>
+
+                    <label class="stackly-toggle-control">
+
+                        <input
+                            type="checkbox"
+                            checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- BILLING ALERTS -->
+
+                <div class="stackly-preference-card">
+
+                    <div class="stackly-preference-icon">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </div>
+
+                    <div class="stackly-preference-copy">
+
+                        <h3>
+                            Billing alerts
+                        </h3>
+
+                        <p>
+                            Receive reminders for invoices,
+                            payments and upcoming billing dates.
+                        </p>
+
+                    </div>
+
+                    <label class="stackly-toggle-control">
+
+                        <input
+                            type="checkbox"
+                            checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- TEAM MESSAGES -->
+
+                <div class="stackly-preference-card">
+
+                    <div class="stackly-preference-icon">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                    </div>
+
+                    <div class="stackly-preference-copy">
+
+                        <h3>
+                            Team messages
+                        </h3>
+
+                        <p>
+                            Stay informed when the Stackly team
+                            replies to your conversations.
+                        </p>
+
+                    </div>
+
+                    <label class="stackly-toggle-control">
+
+                        <input
+                            type="checkbox"
+                            checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECURITY CENTER
+        ================================================== -->
+
+        <section
+            class="stackly-security-center"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-settings-section-title">
+
+                <div>
+
+                    <span>
+                        ACCOUNT SECURITY
+                    </span>
+
+                    <h2>
+                        Security center
+                    </h2>
+
+                </div>
+
+                <div class="stackly-security-score">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Protected
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-security-grid">
+
+
+                <!-- PASSWORD -->
+
+                <div class="stackly-security-card">
+
+                    <div class="stackly-security-card-icon">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Password
+                        </h3>
+
+                        <p>
+                            Keep your account protected with
+                            a strong and unique password.
+                        </p>
+
+                        <span>
+                            Last changed recently
+                        </span>
+
+                    </div>
+
+                    <a href="404-client.html">
+
+                        Change
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- TWO FACTOR -->
+
+                <div class="stackly-security-card">
+
+                    <div class="stackly-security-card-icon">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Two-factor authentication
+                        </h3>
+
+                        <p>
+                            Add another layer of protection
+                            when signing into your account.
+                        </p>
+
+                        <span class="stackly-security-disabled">
+                            Not configured
+                        </span>
+
+                    </div>
+
+                    <a href="404-client.html">
+
+                        Setup
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- LOGIN ACTIVITY -->
+
+                <div class="stackly-security-card">
+
+                    <div class="stackly-security-card-icon">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Login activity
+                        </h3>
+
+                        <p>
+                            Review recent account access
+                            and active sessions.
+                        </p>
+
+                        <span>
+                            1 active session
+                        </span>
+
+                    </div>
+
+                    <a href="404-client.html">
+
+                        Review
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+        <!-- =================================================
+             COMMUNICATION PREFERENCES
+        ================================================== -->
+
+        <section
+            class="stackly-communication-preferences"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-communication-copy">
+
+                <span>
+                    COMMUNICATION
+                </span>
+
+                <h2>
+                    Tell us how you'd
+                    like to stay connected.
+                </h2>
+
+                <p>
+                    Choose the channels you prefer for project
+                    communication and important account updates.
+                </p>
+
+            </div>
+
+
+            <div class="stackly-channel-options">
+
+
+                <label class="stackly-channel-option">
+
+                    <input
+                        type="radio"
+                        name="communication"
+                        checked>
+
+                    <span class="stackly-channel-radio"></span>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <small>
+                            Best for formal updates
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </label>
+
+
+                <label class="stackly-channel-option">
+
+                    <input
+                        type="radio"
+                        name="communication">
+
+                    <span class="stackly-channel-radio"></span>
+
+                    <div>
+
+                        <strong>
+                            Project Messages
+                        </strong>
+
+                        <small>
+                            Best for ongoing discussions
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-message"></i>
+
+                </label>
+
+
+                <label class="stackly-channel-option">
+
+                    <input
+                        type="radio"
+                        name="communication">
+
+                    <span class="stackly-channel-radio"></span>
+
+                    <div>
+
+                        <strong>
+                            Both
+                        </strong>
+
+                        <small>
+                            Receive updates through both channels
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCOUNT ACTIVITY
+        ================================================== -->
+
+        <section
+            class="stackly-account-activity"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-settings-section-title">
+
+                <div>
+
+                    <span>
+                        RECENT ACCOUNT ACTIVITY
+                    </span>
+
+                    <h2>
+                        Your account overview
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-account-activity-grid">
+
+
+                <div class="stackly-activity-stat">
+
+                    <div>
+
+                        <span>
+                            ACTIVE PROJECTS
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+
+                <div class="stackly-activity-stat">
+
+                    <div>
+
+                        <span>
+                            OPEN MESSAGES
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-message"></i>
+
+                </div>
+
+
+                <div class="stackly-activity-stat">
+
+                    <div>
+
+                        <span>
+                            DOCUMENTS
+                        </span>
+
+                        <strong>
+                            28
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div class="stackly-activity-stat">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT AGE
+                        </span>
+
+                        <strong>
+                            1Y
+                        </strong>
+
+                    </div>
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DANGER / ACCOUNT ACTIONS
+        ================================================== -->
+
+        <section
+            class="stackly-account-actions"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-account-action-icon">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </div>
+
+            <div class="stackly-account-action-content">
+
+                <span>
+                    ACCOUNT MANAGEMENT
+                </span>
+
+                <h2>
+                    Need help with your account?
+                </h2>
+
+                <p>
+                    If you need to update account details,
+                    change access information or discuss
+                    portal settings, our team can help.
+                </p>
+
+            </div>
+
+            <a
+                href="404-client.html"
+                class="stackly-account-support-btn">
+
+                Contact Support
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         ADMIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+   
+
+</body>

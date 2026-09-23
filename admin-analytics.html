@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Dashboard"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+                <span>
+                    ADMINISTRATOR
+                </span>
+
+                <strong id="stacklyAdminUserName">
+                    Stackly Admin
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>
+                    Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Analytics
+                </span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-admin.html">
+
+                    <button
+                        type="button"
+                        class="stackly-admin-notification"
+                        aria-label="Notifications"
+                    >
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </button>
+
+                </a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>
+                            LOGGED IN AS
+                        </span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ANALYTICS CONTENT
+        ================================================== -->
+
+        <div class="stackly-admin-content">
+
+
+            <!-- =================================================
+                 1. ANALYTICS INTRO / OVERVIEW
+            ================================================== -->
+
+            <section class="stackly-analytics-intro-section">
+
+
+                <div
+                    class="stackly-analytics-intro-content"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                >
+
+                    <span class="stackly-analytics-intro-label">
+
+                        <i class="fa-solid fa-chart-simple"></i>
+
+                        PERFORMANCE ANALYTICS
+
+                    </span>
+
+
+                    <h2>
+
+                        Understand your
+                        <span>
+                            digital performance.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Track projects, users, services and business
+                        activity through clear insights designed to
+                        help your team understand performance and
+                        make informed decisions.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="stackly-analytics-period-box"
+                    data-aos="fade-left"
+                    data-aos-duration="900"
+                >
+
+                    <span>
+                        REPORTING PERIOD
+                    </span>
+
+                    <strong>
+                        September 2026
+                    </strong>
+
+
+                    <button type="button">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        This Month
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 2. KEY PERFORMANCE METRICS
+            ================================================== -->
+
+            <section class="stackly-analytics-metrics-section">
+
+
+                <div
+                    class="stackly-analytics-section-title"
+                    data-aos="fade-up"
+                >
+
+                    <span>
+                        KEY PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Business metrics at a glance
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-analytics-metrics-grid">
+
+
+                    <!-- USERS -->
+
+                    <article
+                        class="stackly-analytics-metric-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-analytics-metric-top">
+
+                            <div class="stackly-analytics-metric-icon">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
+
+                            <span class="stackly-analytics-growth positive">
+                                +18.4%
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-metric-label">
+                            TOTAL USERS
+                        </span>
+
+
+                        <strong>
+                            12,486
+                        </strong>
+
+
+                        <p>
+                            Compared with 10,541 last month
+                        </p>
+
+
+                        <div class="stackly-analytics-mini-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROJECTS -->
+
+                    <article
+                        class="stackly-analytics-metric-card"
+                        data-aos="fade-up"
+                        data-aos-delay="180"
+                    >
+
+                        <div class="stackly-analytics-metric-top">
+
+                            <div class="stackly-analytics-metric-icon">
+
+                                <i class="fa-solid fa-folder-open"></i>
+
+                            </div>
+
+                            <span class="stackly-analytics-growth positive">
+                                +12.7%
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-metric-label">
+                            ACTIVE PROJECTS
+                        </span>
+
+
+                        <strong>
+                            48
+                        </strong>
+
+
+                        <p>
+                            6 new projects this month
+                        </p>
+
+
+                        <div class="stackly-analytics-mini-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CONVERSION -->
+
+                    <article
+                        class="stackly-analytics-metric-card"
+                        data-aos="fade-up"
+                        data-aos-delay="260"
+                    >
+
+                        <div class="stackly-analytics-metric-top">
+
+                            <div class="stackly-analytics-metric-icon">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            </div>
+
+                            <span class="stackly-analytics-growth positive">
+                                +24.8%
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-metric-label">
+                            CONVERSION RATE
+                        </span>
+
+
+                        <strong>
+                            8.72%
+                        </strong>
+
+
+                        <p>
+                            Based on current enquiries
+                        </p>
+
+
+                        <div class="stackly-analytics-mini-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- REVENUE -->
+
+                    <article
+                        class="stackly-analytics-metric-card"
+                        data-aos="fade-up"
+                        data-aos-delay="340"
+                    >
+
+                        <div class="stackly-analytics-metric-top">
+
+                            <div class="stackly-analytics-metric-icon">
+
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            </div>
+
+                            <span class="stackly-analytics-growth positive">
+                                +15.3%
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-metric-label">
+                            ESTIMATED REVENUE
+                        </span>
+
+
+                        <strong>
+                            ₹8.42L
+                        </strong>
+
+
+                        <p>
+                            Projected from active contracts
+                        </p>
+
+
+                        <div class="stackly-analytics-mini-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 3. PERFORMANCE CHART
+            ================================================== -->
+
+            <section class="stackly-analytics-performance-section">
+
+
+                <!-- CHART -->
+
+                <div
+                    class="stackly-analytics-performance-card"
+                    data-aos="fade-right"
+                    data-aos-duration="900"
+                >
+
+
+                    <div class="stackly-analytics-performance-header">
+
+                        <div>
+
+                            <span>
+                                PERFORMANCE OVERVIEW
+                            </span>
+
+                            <h3>
+                                Monthly activity
+                            </h3>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-chart-legend">
+
+                            <span>
+
+                                <i></i>
+
+                                Projects
+
+                            </span>
+
+
+                            <span>
+
+                                <i></i>
+
+                                Enquiries
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BAR CHART -->
+
+                    <div class="stackly-analytics-bar-chart">
+
+
+                        <div class="stackly-analytics-chart-y">
+
+                            <span>100</span>
+                            <span>80</span>
+                            <span>60</span>
+                            <span>40</span>
+                            <span>20</span>
+                            <span>0</span>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-chart-area">
+
+
+                            <div class="stackly-analytics-grid-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="stackly-analytics-bars">
+
+
+                                <!-- JAN -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:72%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:48%;"
+                                    ></div>
+
+                                    <span>
+                                        Jan
+                                    </span>
+
+                                </div>
+
+
+                                <!-- FEB -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:65%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:55%;"
+                                    ></div>
+
+                                    <span>
+                                        Feb
+                                    </span>
+
+                                </div>
+
+
+                                <!-- MAR -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:82%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:63%;"
+                                    ></div>
+
+                                    <span>
+                                        Mar
+                                    </span>
+
+                                </div>
+
+
+                                <!-- APR -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:58%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:45%;"
+                                    ></div>
+
+                                    <span>
+                                        Apr
+                                    </span>
+
+                                </div>
+
+
+                                <!-- MAY -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:88%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:72%;"
+                                    ></div>
+
+                                    <span>
+                                        May
+                                    </span>
+
+                                </div>
+
+
+                                <!-- JUN -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:76%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:68%;"
+                                    ></div>
+
+                                    <span>
+                                        Jun
+                                    </span>
+
+                                </div>
+
+
+                                <!-- JUL -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:92%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:76%;"
+                                    ></div>
+
+                                    <span>
+                                        Jul
+                                    </span>
+
+                                </div>
+
+
+                                <!-- AUG -->
+
+                                <div class="stackly-analytics-bar-group">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:82%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:70%;"
+                                    ></div>
+
+                                    <span>
+                                        Aug
+                                    </span>
+
+                                </div>
+
+
+                                <!-- SEP -->
+
+                                <div class="stackly-analytics-bar-group current">
+
+                                    <div
+                                        class="stackly-analytics-bar projects"
+                                        style="height:96%;"
+                                    ></div>
+
+                                    <div
+                                        class="stackly-analytics-bar enquiries"
+                                        style="height:84%;"
+                                    ></div>
+
+                                    <span>
+                                        Sep
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PERFORMANCE SUMMARY
+                ================================================== -->
+
+                <div
+                    class="stackly-analytics-summary-card"
+                    data-aos="fade-left"
+                    data-aos-duration="900"
+                >
+
+                    <div class="stackly-analytics-summary-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+
+                    <span>
+                        CURRENT PERFORMANCE
+                    </span>
+
+
+                    <h3>
+                        86.4%
+                    </h3>
+
+
+                    <p>
+                        Overall digital activity has increased
+                        compared with the previous reporting period.
+                    </p>
+
+
+                    <div class="stackly-analytics-summary-progress">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="stackly-analytics-summary-stats">
+
+                        <div>
+
+                            <strong>
+                                +18%
+                            </strong>
+
+                            <span>
+                                Users
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                +13%
+                            </strong>
+
+                            <span>
+                                Projects
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <a href="404-admin.html">
+
+                        View Detailed Report
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 4. TRAFFIC SOURCES
+            ================================================== -->
+
+            <section class="stackly-analytics-source-section">
+
+
+                <div
+                    class="stackly-analytics-source-heading"
+                    data-aos="fade-up"
+                >
+
+                    <span>
+                        TRAFFIC SOURCES
+                    </span>
+
+                    <h2>
+                        Where your visitors come from
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-analytics-source-grid">
+
+
+                    <!-- ORGANIC -->
+
+                    <div
+                        class="stackly-analytics-source-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-analytics-source-icon">
+
+                            <i class="fa-brands fa-google"></i>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-source-info">
+
+                            <strong>
+                                Organic Search
+                            </strong>
+
+                            <span>
+                                42.8% of visitors
+                            </span>
+
+                        </div>
+
+
+                        <strong class="stackly-analytics-source-number">
+                            5,342
+                        </strong>
+
+
+                        <div class="stackly-analytics-source-progress">
+
+                            <span style="width:82%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SOCIAL -->
+
+                    <div
+                        class="stackly-analytics-source-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="180"
+                    >
+
+                        <div class="stackly-analytics-source-icon">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-source-info">
+
+                            <strong>
+                                Social Media
+                            </strong>
+
+                            <span>
+                                24.6% of visitors
+                            </span>
+
+                        </div>
+
+
+                        <strong class="stackly-analytics-source-number">
+                            3,071
+                        </strong>
+
+
+                        <div class="stackly-analytics-source-progress">
+
+                            <span style="width:61%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DIRECT -->
+
+                    <div
+                        class="stackly-analytics-source-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="260"
+                    >
+
+                        <div class="stackly-analytics-source-icon">
+
+                            <i class="fa-solid fa-link"></i>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-source-info">
+
+                            <strong>
+                                Direct Traffic
+                            </strong>
+
+                            <span>
+                                19.2% of visitors
+                            </span>
+
+                        </div>
+
+
+                        <strong class="stackly-analytics-source-number">
+                            2,396
+                        </strong>
+
+
+                        <div class="stackly-analytics-source-progress">
+
+                            <span style="width:48%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div
+                        class="stackly-analytics-source-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="340"
+                    >
+
+                        <div class="stackly-analytics-source-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-source-info">
+
+                            <strong>
+                                Email Campaigns
+                            </strong>
+
+                            <span>
+                                13.4% of visitors
+                            </span>
+
+                        </div>
+
+
+                        <strong class="stackly-analytics-source-number">
+                            1,677
+                        </strong>
+
+
+                        <div class="stackly-analytics-source-progress">
+
+                            <span style="width:34%;"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 5. PROJECT PERFORMANCE
+            ================================================== -->
+
+            <section class="stackly-analytics-project-section">
+
+
+                <div
+                    class="stackly-analytics-project-header"
+                    data-aos="fade-up"
+                >
+
+                    <div>
+
+                        <span>
+                            PROJECT PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Track active projects
+                        </h2>
+
+                    </div>
+
+
+                    <a href="admin-projects.html">
+
+                        Manage Projects
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-analytics-project-list">
+
+
+                    <!-- PROJECT 01 -->
+
+                    <article
+                        class="stackly-analytics-project-row"
+                        data-aos="fade-right"
+                    >
+
+                        <div class="stackly-analytics-project-number">
+                            01
+                        </div>
+
+
+                        <div class="stackly-analytics-project-details">
+
+                            <strong>
+                                Enterprise Website
+                            </strong>
+
+                            <span>
+                                Web Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-project-progress">
+
+                            <div>
+
+                                <span style="width:88%;"></span>
+
+                            </div>
+
+                            <strong>
+                                88%
+                            </strong>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-project-status">
+                            ON TRACK
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article
+                        class="stackly-analytics-project-row"
+                        data-aos="fade-right"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-analytics-project-number">
+                            02
+                        </div>
+
+
+                        <div class="stackly-analytics-project-details">
+
+                            <strong>
+                                Mobile Application
+                            </strong>
+
+                            <span>
+                                App Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-project-progress">
+
+                            <div>
+
+                                <span style="width:72%;"></span>
+
+                            </div>
+
+                            <strong>
+                                72%
+                            </strong>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-project-status">
+                            ACTIVE
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article
+                        class="stackly-analytics-project-row"
+                        data-aos="fade-right"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="stackly-analytics-project-number">
+                            03
+                        </div>
+
+
+                        <div class="stackly-analytics-project-details">
+
+                            <strong>
+                                Cloud Migration
+                            </strong>
+
+                            <span>
+                                Cloud Solutions
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-project-progress">
+
+                            <div>
+
+                                <span style="width:64%;"></span>
+
+                            </div>
+
+                            <strong>
+                                64%
+                            </strong>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-project-status">
+                            ACTIVE
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 04 -->
+
+                    <article
+                        class="stackly-analytics-project-row"
+                        data-aos="fade-right"
+                        data-aos-delay="300"
+                    >
+
+                        <div class="stackly-analytics-project-number">
+                            04
+                        </div>
+
+
+                        <div class="stackly-analytics-project-details">
+
+                            <strong>
+                                Digital Strategy
+                            </strong>
+
+                            <span>
+                                Consulting
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-analytics-project-progress">
+
+                            <div>
+
+                                <span style="width:94%;"></span>
+
+                            </div>
+
+                            <strong>
+                                94%
+                            </strong>
+
+                        </div>
+
+
+                        <span class="stackly-analytics-project-status">
+                            NEAR COMPLETE
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 6. CONVERSION FUNNEL
+            ================================================== -->
+
+            <section class="stackly-analytics-funnel-section">
+
+
+                <div
+                    class="stackly-analytics-funnel-heading"
+                    data-aos="fade-up"
+                >
+
+                    <span>
+                        CONVERSION FUNNEL
+                    </span>
+
+                    <h2>
+                        From visitor to client
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="stackly-analytics-funnel"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                >
+
+
+                    <!-- STEP 01 -->
+
+                    <div class="stackly-analytics-funnel-step funnel-one">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Visitors
+                        </strong>
+
+                        <b>
+                            12,486
+                        </b>
+
+                    </div>
+
+
+                    <!-- STEP 02 -->
+
+                    <div class="stackly-analytics-funnel-step funnel-two">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Enquiries
+                        </strong>
+
+                        <b>
+                            2,864
+                        </b>
+
+                    </div>
+
+
+                    <!-- STEP 03 -->
+
+                    <div class="stackly-analytics-funnel-step funnel-three">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            Qualified Leads
+                        </strong>
+
+                        <b>
+                            742
+                        </b>
+
+                    </div>
+
+
+                    <!-- STEP 04 -->
+
+                    <div class="stackly-analytics-funnel-step funnel-four">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+                            New Clients
+                        </strong>
+
+                        <b>
+                            186
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 7. RECENT ANALYTICS ACTIVITY
+            ================================================== -->
+
+            <section class="stackly-analytics-activity-section">
+
+
+                <div
+                    class="stackly-analytics-activity-heading"
+                    data-aos="fade-up"
+                >
+
+                    <span>
+                        LIVE ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent analytics events
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-analytics-activity-grid">
+
+
+                    <!-- EVENT 01 -->
+
+                    <div
+                        class="stackly-analytics-event"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-analytics-event-icon">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                New user registered
+                            </strong>
+
+                            <p>
+                                A new visitor created an account.
+                            </p>
+
+                            <span>
+                                8 minutes ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EVENT 02 -->
+
+                    <div
+                        class="stackly-analytics-event"
+                        data-aos="fade-up"
+                        data-aos-delay="180"
+                    >
+
+                        <div class="stackly-analytics-event-icon">
+
+                            <i class="fa-solid fa-file-circle-check"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Project completed
+                            </strong>
+
+                            <p>
+                                Enterprise website moved to completed.
+                            </p>
+
+                            <span>
+                                24 minutes ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EVENT 03 -->
+
+                    <div
+                        class="stackly-analytics-event"
+                        data-aos="fade-up"
+                        data-aos-delay="260"
+                    >
+
+                        <div class="stackly-analytics-event-icon">
+
+                            <i class="fa-solid fa-envelope-open-text"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                New enquiry received
+                            </strong>
+
+                            <p>
+                                A new service enquiry was submitted.
+                            </p>
+
+                            <span>
+                                46 minutes ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 8. ANALYTICS INSIGHT CTA
+            ================================================== -->
+
+            <section
+                class="stackly-analytics-insight-section"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
+
+
+                <div class="stackly-analytics-insight-glow"></div>
+
+
+                <div class="stackly-analytics-insight-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div class="stackly-analytics-insight-content">
+
+                    <span>
+                        PERFORMANCE INSIGHT
+                    </span>
+
+                    <h2>
+                        Your digital activity is showing
+                        steady monthly growth.
+                    </h2>
+
+                    <p>
+                        Review your latest analytics, compare
+                        performance trends and identify areas
+                        that may need attention.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-analytics-insight-button"
+                >
+
+                    Explore Insights
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>

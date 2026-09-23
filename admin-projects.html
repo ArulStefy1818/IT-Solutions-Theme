@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Dashboard"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+    <span>ADMINISTRATOR</span>
+
+    <strong id="stacklyAdminUserName">
+        Stackly Admin
+    </strong>
+
+</div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>Services</span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>Messages</span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <!-- LOGOUT -->
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button></a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>LOGGED IN AS</span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =====================================================
+     STACKLY IT SOLUTIONS
+     PROJECT MANAGEMENT PAGE
+====================================================== -->
+
+<div class="stackly-projects-page">
+
+
+    <!-- =================================================
+         PROJECT HERO
+    ================================================== -->
+
+    <section class="stackly-project-command-hero">
+
+        <div class="stackly-project-hero-background">
+            <span class="project-glow project-glow-one"></span>
+            <span class="project-glow project-glow-two"></span>
+            <span class="project-grid-pattern"></span>
+        </div>
+
+
+        <div
+            class="stackly-project-hero-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+
+            <div class="stackly-project-eyebrow">
+                <span class="project-eyebrow-line"></span>
+                PROJECT COMMAND CENTER
+            </div>
+
+            <h2>
+                Build ideas.
+                <strong>Launch impact.</strong>
+            </h2>
+
+            <p>
+                Monitor every digital project, track delivery progress,
+                coordinate teams and keep your Stackly projects moving
+                toward successful launches.
+            </p>
+
+
+            <div class="stackly-project-hero-actions">
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-project-primary-action"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Project
+                </a>
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-project-secondary-action"
+                >
+                    <i class="fa-solid fa-chart-simple"></i>
+                    Project Reports
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div
+            class="stackly-project-hero-visual"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+        >
+
+            <div class="stackly-project-system-orbit orbit-alpha"></div>
+            <div class="stackly-project-system-orbit orbit-beta"></div>
+
+            <div class="stackly-project-core">
+
+                <div class="project-core-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <strong>24</strong>
+
+                <span>ACTIVE PROJECTS</span>
+
+            </div>
+
+
+            <div class="stackly-project-floating project-float-progress">
+
+                <div class="project-floating-icon">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+
+                <div>
+                    <strong>87%</strong>
+                    <span>Delivery Rate</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-project-floating project-float-launch">
+
+                <i class="fa-solid fa-rocket"></i>
+
+                <div>
+                    <strong>06</strong>
+                    <span>Launching Soon</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT STATISTICS
+    ================================================== -->
+
+    <section class="stackly-project-metrics">
+
+        <div
+            class="stackly-project-metric-card metric-orange"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="project-metric-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div class="project-metric-content">
+
+                <span>Total Projects</span>
+
+                <strong>48</strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12% this quarter
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-project-metric-card metric-yellow"
+            data-aos="fade-up"
+            data-aos-delay="180"
+        >
+
+            <div class="project-metric-icon">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+
+            <div class="project-metric-content">
+
+                <span>In Development</span>
+
+                <strong>24</strong>
+
+                <small>
+                    8 projects in sprint
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-project-metric-card metric-green"
+            data-aos="fade-up"
+            data-aos-delay="260"
+        >
+
+            <div class="project-metric-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="project-metric-content">
+
+                <span>Completed</span>
+
+                <strong>18</strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    8 delivered this month
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-project-metric-card metric-purple"
+            data-aos="fade-up"
+            data-aos-delay="340"
+        >
+
+            <div class="project-metric-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div class="project-metric-content">
+
+                <span>Upcoming Launches</span>
+
+                <strong>06</strong>
+
+                <small>
+                    Next launch in 4 days
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FEATURED PROJECTS
+    ================================================== -->
+
+    <section class="stackly-project-showcase-section">
+
+
+        <div
+            class="stackly-project-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span class="stackly-project-section-label">
+                    FEATURED WORK
+                </span>
+
+                <h3>
+                    Projects in the spotlight
+                </h3>
+
+                <p>
+                    Keep track of the projects currently receiving
+                    the most attention from your delivery teams.
+                </p>
+
+            </div>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-project-view-all"
+            >
+                View All Projects
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <div class="stackly-project-showcase-grid">
+
+
+            <!-- PROJECT ONE -->
+
+            <article
+                class="stackly-project-showcase-card project-card-orange"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="project-showcase-top">
+
+                    <div class="project-category-badge">
+                        <i class="fa-solid fa-globe"></i>
+                        WEB PLATFORM
+                    </div>
+
+                    <button
+                        class="project-more-button"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="project-showcase-symbol">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+
+                <h4>
+                    Stackly Commerce Connect
+                </h4>
+
+                <p>
+                    Next-generation e-commerce platform designed
+                    for high-performance online businesses.
+                </p>
+
+
+                <div class="project-tech-row">
+
+                    <span>HTML</span>
+                    <span>React</span>
+                    <span>Node</span>
+                    <span>API</span>
+
+                </div>
+
+
+                <div class="project-progress-heading">
+
+                    <span>Development Progress</span>
+
+                    <strong>82%</strong>
+
+                </div>
+
+
+                <div class="project-progress-track">
+
+                    <span style="width:82%;"></span>
+
+                </div>
+
+
+                <div class="project-card-footer">
+
+                    <div class="project-members">
+
+                        <span>RK</span>
+                        <span>AS</span>
+                        <span>MK</span>
+                        <span>+4</span>
+
+                    </div>
+
+                    <span class="project-deadline">
+                        <i class="fa-regular fa-calendar"></i>
+                        Sep 28
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT TWO -->
+
+            <article
+                class="stackly-project-showcase-card project-card-blue"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="project-showcase-top">
+
+                    <div class="project-category-badge">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        MOBILE APP
+                    </div>
+
+                    <button
+                        class="project-more-button"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="project-showcase-symbol">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+
+                <h4>
+                    Stackly Farm Connect
+                </h4>
+
+                <p>
+                    Smart farming management application connecting growers with agricultural technology.
+                </p>
+
+
+                <div class="project-tech-row">
+
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>AI</span>
+                    <span>Maps</span>
+
+                </div>
+
+
+                <div class="project-progress-heading">
+
+                    <span>Development Progress</span>
+
+                    <strong>64%</strong>
+
+                </div>
+
+
+                <div class="project-progress-track">
+
+                    <span style="width:64%;"></span>
+
+                </div>
+
+
+                <div class="project-card-footer">
+
+                    <div class="project-members">
+
+                        <span>SK</span>
+                        <span>VP</span>
+                        <span>JR</span>
+                        <span>+3</span>
+
+                    </div>
+
+                    <span class="project-deadline">
+                        <i class="fa-regular fa-calendar"></i>
+                        Oct 06
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT THREE -->
+
+            <article
+                class="stackly-project-showcase-card project-card-purple"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+
+                <div class="project-showcase-top">
+
+                    <div class="project-category-badge">
+                        <i class="fa-solid fa-chart-line"></i>
+                        ANALYTICS
+                    </div>
+
+                    <button
+                        class="project-more-button"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="project-showcase-symbol">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+
+
+                <h4>
+                    Stackly Insights Analytics
+                </h4>
+
+                <p>
+                    Business intelligence dashboard transforming
+                    operational data into actionable insights.
+                </p>
+
+
+                <div class="project-tech-row">
+
+                    <span>Python</span>
+                    <span>AI</span>
+                    <span>SQL</span>
+                    <span>Cloud</span>
+
+                </div>
+
+
+                <div class="project-progress-heading">
+
+                    <span>Development Progress</span>
+
+                    <strong>91%</strong>
+
+                </div>
+
+
+                <div class="project-progress-track">
+
+                    <span style="width:91%;"></span>
+
+                </div>
+
+
+                <div class="project-card-footer">
+
+                    <div class="project-members">
+
+                        <span>AK</span>
+                        <span>DM</span>
+                        <span>PS</span>
+                        <span>+2</span>
+
+                    </div>
+
+                    <span class="project-deadline">
+                        <i class="fa-regular fa-calendar"></i>
+                        Sep 25
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT PIPELINE
+    ================================================== -->
+
+    <section class="stackly-project-pipeline-section">
+
+
+        <div
+            class="stackly-project-section-heading"
+            data-aos="fade-right"
+        >
+
+            <div>
+
+                <span class="stackly-project-section-label">
+                    DELIVERY PIPELINE
+                </span>
+
+                <h3>
+                    Project workflow
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-project-pipeline"
+            data-aos="fade-up"
+        >
+
+
+            <!-- DISCOVERY -->
+
+            <div class="stackly-project-stage">
+
+                <div class="project-stage-number">
+                    01
+                </div>
+
+                <div class="project-stage-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <h4>
+                    Discovery
+                </h4>
+
+                <strong>
+                    08 Projects
+                </strong>
+
+                <p>
+                    Ideas, research and requirements.
+                </p>
+
+            </div>
+
+
+            <!-- DESIGN -->
+
+            <div class="stackly-project-stage">
+
+                <div class="project-stage-number">
+                    02
+                </div>
+
+                <div class="project-stage-icon">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+
+                <h4>
+                    Design
+                </h4>
+
+                <strong>
+                    06 Projects
+                </strong>
+
+                <p>
+                    UX, UI and product experiences.
+                </p>
+
+            </div>
+
+
+            <!-- DEVELOPMENT -->
+
+            <div class="stackly-project-stage active-stage">
+
+                <div class="project-stage-number">
+                    03
+                </div>
+
+                <div class="project-stage-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h4>
+                    Development
+                </h4>
+
+                <strong>
+                    14 Projects
+                </strong>
+
+                <p>
+                    Engineering and implementation.
+                </p>
+
+            </div>
+
+
+            <!-- TESTING -->
+
+            <div class="stackly-project-stage">
+
+                <div class="project-stage-number">
+                    04
+                </div>
+
+                <div class="project-stage-icon">
+                    <i class="fa-solid fa-vial"></i>
+                </div>
+
+                <h4>
+                    Testing
+                </h4>
+
+                <strong>
+                    05 Projects
+                </strong>
+
+                <p>
+                    Quality assurance and review.
+                </p>
+
+            </div>
+
+
+            <!-- LAUNCH -->
+
+            <div class="stackly-project-stage">
+
+                <div class="project-stage-number">
+                    05
+                </div>
+
+                <div class="project-stage-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h4>
+                    Launch
+                </h4>
+
+                <strong>
+                    06 Projects
+                </strong>
+
+                <p>
+                    Deployment and handover.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PERFORMANCE + TECHNOLOGY
+    ================================================== -->
+
+    <section class="stackly-project-insight-grid">
+
+
+        <!-- PERFORMANCE -->
+
+        <div
+            class="stackly-project-performance-card"
+            data-aos="fade-right"
+        >
+
+            <div class="project-insight-header">
+
+                <div>
+
+                    <span>
+                        DELIVERY PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Project health
+                    </h3>
+
+                </div>
+
+                <div class="project-health-status">
+                    <span></span>
+                    Healthy
+                </div>
+
+            </div>
+
+
+            <div class="project-health-score">
+
+                <div class="project-health-circle">
+
+                    <div>
+
+                        <strong>
+                            87%
+                        </strong>
+
+                        <span>
+                            HEALTH
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-health-details">
+
+                    <div>
+
+                        <span>On Schedule</span>
+                        <strong>82%</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Within Budget</span>
+                        <strong>91%</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Client Satisfaction</span>
+                        <strong>94%</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-health-bars">
+
+                <div>
+
+                    <span>Delivery</span>
+
+                    <div>
+                        <span style="width:82%;"></span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <span>Quality</span>
+
+                    <div>
+                        <span style="width:94%;"></span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <span>Budget</span>
+
+                    <div>
+                        <span style="width:91%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TECHNOLOGY -->
+
+        <div
+            class="stackly-project-technology-card"
+            data-aos="fade-left"
+        >
+
+            <div class="project-insight-header">
+
+                <div>
+
+                    <span>
+                        TECHNOLOGY LANDSCAPE
+                    </span>
+
+                    <h3>
+                        Current stack
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-microchip"></i>
+
+            </div>
+
+
+            <div class="stackly-project-tech-list">
+
+
+                <div class="project-tech-item">
+
+                    <div class="project-tech-logo">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>React</strong>
+                        <span>12 Projects</span>
+
+                    </div>
+
+                    <b>25%</b>
+
+                </div>
+
+
+                <div class="project-tech-item">
+
+                    <div class="project-tech-logo">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Node.js</strong>
+                        <span>09 Projects</span>
+
+                    </div>
+
+                    <b>19%</b>
+
+                </div>
+
+
+                <div class="project-tech-item">
+
+                    <div class="project-tech-logo">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Python</strong>
+                        <span>08 Projects</span>
+
+                    </div>
+
+                    <b>17%</b>
+
+                </div>
+
+
+                <div class="project-tech-item">
+
+                    <div class="project-tech-logo">
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Figma</strong>
+                        <span>15 Projects</span>
+
+                    </div>
+
+                    <b>31%</b>
+
+                </div>
+
+
+                <div class="project-tech-item">
+
+                    <div class="project-tech-logo">
+                        <i class="fa-brands fa-aws"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>AWS</strong>
+                        <span>07 Projects</span>
+
+                    </div>
+
+                    <b>14%</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TEAM ASSIGNMENTS
+    ================================================== -->
+
+    <section class="stackly-project-team-section">
+
+
+        <div
+            class="stackly-project-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span class="stackly-project-section-label">
+                    TEAM CAPACITY
+                </span>
+
+                <h3>
+                    Project team assignments
+                </h3>
+
+                <p>
+                    Monitor active contributors and their current
+                    project workload.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-project-team-grid">
+
+
+            <!-- TEAM MEMBER -->
+
+            <div
+                class="stackly-project-team-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="project-team-avatar">
+                    AK
+                </div>
+
+                <div class="project-team-info">
+
+                    <strong>
+                        Arjun Kumar
+                    </strong>
+
+                    <span>
+                        Lead Developer
+                    </span>
+
+                </div>
+
+                <div class="project-team-workload">
+
+                    <div>
+
+                        <span>Workload</span>
+
+                        <strong>84%</strong>
+
+                    </div>
+
+                    <div class="project-workload-track">
+                        <span style="width:84%;"></span>
+                    </div>
+
+                </div>
+
+                 
+
+            </div>
+
+
+
+            <div
+                class="stackly-project-team-card"
+                data-aos="fade-up"
+                data-aos-delay="180"
+            >
+
+                <div class="project-team-avatar">
+                    PS
+                </div>
+
+                <div class="project-team-info">
+
+                    <strong>
+                        Priya Shah
+                    </strong>
+
+                    <span>
+                        UI/UX Designer
+                    </span>
+
+                </div>
+
+                <div class="project-team-workload">
+
+                    <div>
+
+                        <span>Workload</span>
+
+                        <strong>68%</strong>
+
+                    </div>
+
+                    <div class="project-workload-track">
+                        <span style="width:68%;"></span>
+                    </div>
+
+                </div>
+
+                 
+            </div>
+
+
+
+            <div
+                class="stackly-project-team-card"
+                data-aos="fade-up"
+                data-aos-delay="260"
+            >
+
+                <div class="project-team-avatar">
+                    RK
+                </div>
+
+                <div class="project-team-info">
+
+                    <strong>
+                        Rahul Krishnan
+                    </strong>
+
+                    <span>
+                        Backend Engineer
+                    </span>
+
+                </div>
+
+                <div class="project-team-workload">
+
+                    <div>
+
+                        <span>Workload</span>
+
+                        <strong>76%</strong>
+
+                    </div>
+
+                    <div class="project-workload-track">
+                        <span style="width:76%;"></span>
+                    </div>
+
+                </div>
+
+                 
+
+            </div>
+
+
+
+            <div
+                class="stackly-project-team-card"
+                data-aos="fade-up"
+                data-aos-delay="340"
+            >
+
+                <div class="project-team-avatar">
+                    DM
+                </div>
+
+                <div class="project-team-info">
+
+                    <strong>
+                        Divya Menon
+                    </strong>
+
+                    <span>
+                        Product Manager
+                    </span>
+
+                </div>
+
+                <div class="project-team-workload">
+
+                    <div>
+
+                        <span>Workload</span>
+
+                        <strong>59%</strong>
+
+                    </div>
+
+                    <div class="project-workload-track">
+                        <span style="width:59%;"></span>
+                    </div>
+
+                </div>
+ 
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RECENT ACTIVITY + DEADLINES
+    ================================================== -->
+
+    <section class="stackly-project-bottom-grid">
+
+
+        <!-- RECENT ACTIVITY -->
+
+        <div
+            class="stackly-project-activity-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="project-panel-heading">
+
+                <div>
+
+                    <span>
+                        LIVE FEED
+                    </span>
+
+                    <h3>
+                        Recent project activity
+                    </h3>
+
+                </div>
+
+                <span class="project-live-indicator">
+                    <i></i>
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="stackly-project-activity-list">
+
+
+                <div class="project-activity-row">
+
+                    <div class="project-activity-icon orange">
+                        <i class="fa-solid fa-code-commit"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            New deployment pushed
+                        </strong>
+
+                        <span>
+                            Stackly Commerce
+                        </span>
+
+                    </div>
+
+                    <time>
+                        12 min
+                    </time>
+
+                </div>
+
+
+                <div class="project-activity-row">
+
+                    <div class="project-activity-icon green">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            QA milestone completed
+                        </strong>
+
+                        <span>
+                            Stackly Insights
+                        </span>
+
+                    </div>
+
+                    <time>
+                        38 min
+                    </time>
+
+                </div>
+
+
+                <div class="project-activity-row">
+
+                    <div class="project-activity-icon yellow">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            New developer assigned
+                        </strong>
+
+                        <span>
+                            Farm Connect
+                        </span>
+
+                    </div>
+
+                    <time>
+                        1 hr
+                    </time>
+
+                </div>
+
+
+                <div class="project-activity-row">
+
+                    <div class="project-activity-icon blue">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Project proposal approved
+                        </strong>
+
+                        <span>
+                            Stackly Finance
+                        </span>
+
+                    </div>
+
+                    <time>
+                        2 hrs
+                    </time>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DEADLINES -->
+
+        <div
+            class="stackly-project-deadline-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="project-panel-heading">
+
+                <div>
+
+                    <span>
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        Important deadlines
+                    </h3>
+
+                </div>
+
+                <i class="fa-regular fa-calendar-days"></i>
+
+            </div>
+
+
+            <div class="stackly-project-deadline-list">
+
+
+                <div class="project-deadline-item urgent">
+
+                    <div class="deadline-date">
+
+                        <strong>
+                            25
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Stackly Insights
+                        </strong>
+
+                        <span>
+                            Final review & approval
+                        </span>
+
+                    </div>
+
+                    <b>
+                        3 DAYS
+                    </b>
+
+                </div>
+
+
+                <div class="project-deadline-item">
+
+                    <div class="deadline-date">
+
+                        <strong>
+                            28
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Stackly Commerce
+                        </strong>
+
+                        <span>
+                            Production deployment
+                        </span>
+
+                    </div>
+
+                    <b>
+                        6 DAYS
+                    </b>
+
+                </div>
+
+
+                <div class="project-deadline-item">
+
+                    <div class="deadline-date">
+
+                        <strong>
+                            06
+                        </strong>
+
+                        <span>
+                            OCT
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Farm Connect
+                        </strong>
+
+                        <span>
+                            Beta release
+                        </span>
+
+                    </div>
+
+                    <b>
+                        14 DAYS
+                    </b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUICK ACTIONS
+    ================================================== -->
+
+    <section
+        class="stackly-project-quick-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-project-quick-heading">
+
+            <span>
+                PROJECT TOOLS
+            </span>
+
+            <h3>
+                Quick actions
+            </h3>
+
+        </div>
+
+
+        <div class="stackly-project-quick-grid">
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-project-quick-card"
+            >
+
+                <div>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <span>
+                    New Project
+                </span>
+
+                <small>
+                    Start a new workflow
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-project-quick-card"
+            >
+
+                <div>
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+
+                <span>
+                    Assign Team
+                </span>
+
+                <small>
+                    Manage project members
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-project-quick-card"
+            >
+
+                <div>
+                    <i class="fa-solid fa-file-export"></i>
+                </div>
+
+                <span>
+                    Export Report
+                </span>
+
+                <small>
+                    Download project data
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-project-quick-card"
+            >
+
+                <div>
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+
+                <span>
+                    Project Settings
+                </span>
+
+                <small>
+                    Configure workflows
+                </small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT FOOTER
+    ================================================== -->
+
+    <footer class="stackly-project-footer">
+
+        <div class="project-footer-mark">
+            <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Stackly Project Command Center
+            </strong>
+
+            <span>
+                Building digital experiences that move businesses forward.
+            </span>
+
+        </div>
+
+        <span class="project-footer-status">
+            <i></i>
+            ALL SYSTEMS OPERATIONAL
+        </span>
+
+    </footer>
+
+
+</div>
+    
+</main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>

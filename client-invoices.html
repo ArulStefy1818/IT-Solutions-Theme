@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Dashboard for managing projects, services, messages and account information.">
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>Client Account</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Active Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <!-- INVOICES -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <!-- DOCUMENTS -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+ 
+
+            <!-- SETTINGS -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+ 
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                       <strong>
+            Client Account
+        </strong>
+
+        <span id="stacklyClientEmail">
+            Loading...
+        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+                <!-- =====================================================
+             INVOICE PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-billing-hub">
+
+
+            <!-- =================================================
+                 BILLING HERO
+            ================================================== -->
+
+            <section
+                class="stackly-billing-hero"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-billing-hero-copy">
+
+                    <span class="stackly-billing-kicker">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        CLIENT BILLING CENTER
+                    </span>
+
+                    <h2>
+                        Simple, clear and
+                        <strong>transparent billing.</strong>
+                    </h2>
+
+                    <p>
+                        View invoices, monitor payment activity,
+                        review billing details and keep your
+                        account payments organized.
+                    </p>
+
+                    <div class="stackly-billing-hero-actions">
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-billing-main-btn">
+
+                            View Invoices
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-billing-secondary-btn">
+
+                            <i class="fa-solid fa-folder-open"></i>
+
+                            Documents
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BILLING VISUAL -->
+
+                <div class="stackly-billing-hero-visual">
+
+                    <div class="stackly-billing-ring billing-ring-one"></div>
+
+                    <div class="stackly-billing-ring billing-ring-two"></div>
+
+                    <div class="stackly-billing-ring billing-ring-three"></div>
+
+                    <div class="stackly-billing-card-visual">
+
+                        <div class="stackly-billing-card-top">
+
+                            <span>
+                                CURRENT BALANCE
+                            </span>
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <strong>
+                            ₹24,500
+                        </strong>
+
+                        <div class="stackly-billing-card-line"></div>
+
+                        <div class="stackly-billing-card-bottom">
+
+                            <span>
+                                STACKLY CLIENT
+                            </span>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BILLING SUMMARY
+            ================================================== -->
+
+            <section
+                class="stackly-finance-summary"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-finance-summary-card">
+
+                    <div class="stackly-finance-summary-icon">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+
+                    <div class="stackly-finance-summary-content">
+
+                        <span>
+                            TOTAL BILLED
+                        </span>
+
+                        <strong>
+                            ₹1,48,500
+                        </strong>
+
+                        <small>
+                            Across active projects
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-summary-card">
+
+                    <div class="stackly-finance-summary-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="stackly-finance-summary-content">
+
+                        <span>
+                            TOTAL PAID
+                        </span>
+
+                        <strong>
+                            ₹1,24,000
+                        </strong>
+
+                        <small>
+                            Payments completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-summary-card">
+
+                    <div class="stackly-finance-summary-icon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+
+                    <div class="stackly-finance-summary-content">
+
+                        <span>
+                            OUTSTANDING
+                        </span>
+
+                        <strong>
+                            ₹24,500
+                        </strong>
+
+                        <small>
+                            Pending payment
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-summary-card">
+
+                    <div class="stackly-finance-summary-icon">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <div class="stackly-finance-summary-content">
+
+                        <span>
+                            TOTAL INVOICES
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                        <small>
+                            Billing records
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT ALERT
+            ================================================== -->
+
+            <section
+                class="stackly-payment-alert"
+                data-aos="fade-right"
+                data-aos-duration="1000">
+
+                <div class="stackly-payment-alert-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stackly-payment-alert-content">
+
+                    <span>
+                        UPCOMING PAYMENT
+                    </span>
+
+                    <h3>
+                        Invoice #STK-2026-008 is due soon.
+                    </h3>
+
+                    <p>
+                        Your outstanding balance of ₹24,500 is
+                        scheduled for payment on October 05, 2026.
+                    </p>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-payment-alert-btn">
+
+                    Review Invoice
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INVOICE LIST
+            ================================================== -->
+
+            <section
+                class="stackly-invoice-board"
+                id="stacklyInvoiceList">
+
+                <div
+                    class="stackly-invoice-board-heading"
+                    data-aos="fade-up"
+                    data-aos-duration="900">
+
+                    <div>
+
+                        <span>
+                            BILLING RECORDS
+                        </span>
+
+                        <h2>
+                            Recent invoices
+                        </h2>
+
+                    </div>
+
+                    <div class="stackly-invoice-filter">
+
+                        <button
+                            type="button"
+                            class="stackly-invoice-filter-active">
+
+                            All
+
+                        </button>
+
+                        <button type="button">
+                            Paid
+                        </button>
+
+                        <button type="button">
+                            Pending
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INVOICE TABLE -->
+
+                <div
+                    class="stackly-invoice-table"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+
+                    <div class="stackly-invoice-table-head">
+
+                        <span>
+                            INVOICE
+                        </span>
+
+                        <span>
+                            PROJECT
+                        </span>
+
+                        <span>
+                            DATE
+                        </span>
+
+                        <span>
+                            AMOUNT
+                        </span>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <span>
+                            ACTION
+                        </span>
+
+                    </div>
+
+
+                    <!-- INVOICE 01 -->
+
+                    <div class="stackly-invoice-row">
+
+                        <div class="stackly-invoice-number">
+
+                            <div class="stackly-invoice-symbol">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+
+                            <strong>
+                                #STK-2026-008
+                            </strong>
+
+                        </div>
+
+                        <span class="stackly-invoice-project">
+                            Website Development
+                        </span>
+
+                        <span class="stackly-invoice-date">
+                            Sep 05, 2026
+                        </span>
+
+                        <strong class="stackly-invoice-amount">
+                            ₹24,500
+                        </strong>
+
+                        <span class="stackly-invoice-status pending">
+                            Pending
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-invoice-view">
+
+                            View
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- INVOICE 02 -->
+
+                    <div class="stackly-invoice-row">
+
+                        <div class="stackly-invoice-number">
+
+                            <div class="stackly-invoice-symbol">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+
+                            <strong>
+                                #STK-2026-007
+                            </strong>
+
+                        </div>
+
+                        <span class="stackly-invoice-project">
+                            Mobile Application
+                        </span>
+
+                        <span class="stackly-invoice-date">
+                            Aug 18, 2026
+                        </span>
+
+                        <strong class="stackly-invoice-amount">
+                            ₹32,000
+                        </strong>
+
+                        <span class="stackly-invoice-status paid">
+                            Paid
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-invoice-view">
+
+                            View
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- INVOICE 03 -->
+
+                    <div class="stackly-invoice-row">
+
+                        <div class="stackly-invoice-number">
+
+                            <div class="stackly-invoice-symbol">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <strong>
+                                #STK-2026-006
+                            </strong>
+
+                        </div>
+
+                        <span class="stackly-invoice-project">
+                            Digital Marketing Strategy
+                        </span>
+
+                        <span class="stackly-invoice-date">
+                            Aug 05, 2026
+                        </span>
+
+                        <strong class="stackly-invoice-amount">
+                            ₹18,500
+                        </strong>
+
+                        <span class="stackly-invoice-status paid">
+                            Paid
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-invoice-view">
+
+                            View
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- INVOICE 04 -->
+
+                    <div class="stackly-invoice-row">
+
+                        <div class="stackly-invoice-number">
+
+                            <div class="stackly-invoice-symbol">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <strong>
+                                #STK-2026-005
+                            </strong>
+
+                        </div>
+
+                        <span class="stackly-invoice-project">
+                            Creative Design
+                        </span>
+
+                        <span class="stackly-invoice-date">
+                            Jul 22, 2026
+                        </span>
+
+                        <strong class="stackly-invoice-amount">
+                            ₹15,000
+                        </strong>
+
+                        <span class="stackly-invoice-status paid">
+                            Paid
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-invoice-view">
+
+                            View
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- INVOICE 05 -->
+
+                    <div class="stackly-invoice-row">
+
+                        <div class="stackly-invoice-number">
+
+                            <div class="stackly-invoice-symbol">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <strong>
+                                #STK-2026-004
+                            </strong>
+
+                        </div>
+
+                        <span class="stackly-invoice-project">
+                            Web System Integration
+                        </span>
+
+                        <span class="stackly-invoice-date">
+                            Jul 10, 2026
+                        </span>
+
+                        <strong class="stackly-invoice-amount">
+                            ₹21,500
+                        </strong>
+
+                        <span class="stackly-invoice-status paid">
+                            Paid
+                        </span>
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-invoice-view">
+
+                            View
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT BREAKDOWN
+            ================================================== -->
+
+            <section
+                class="stackly-payment-breakdown"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-payment-breakdown-copy">
+
+                    <span>
+                        PAYMENT OVERVIEW
+                    </span>
+
+                    <h2>
+                        Track your billing progress.
+                    </h2>
+
+                    <p>
+                        Your account is currently up to date with
+                        one invoice awaiting payment.
+                    </p>
+
+                    <div class="stackly-payment-progress">
+
+                        <div class="stackly-payment-progress-top">
+
+                            <span>
+                                Paid amount
+                            </span>
+
+                            <strong>
+                                83%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-payment-progress-track">
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-payment-breakdown-stats">
+
+                    <div class="stackly-payment-mini-card">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+
+                            <strong>
+                                07
+                            </strong>
+
+                            <span>
+                                Paid invoices
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-payment-mini-card">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <div>
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <span>
+                                Pending invoice
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-payment-mini-card">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+
+                            <strong>
+                                Oct 05
+                            </strong>
+
+                            <span>
+                                Next due date
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BILLING ACTIVITY
+            ================================================== -->
+
+            <section
+                class="stackly-billing-activity"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-billing-activity-heading">
+
+                    <span>
+                        BILLING ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent payment history
+                    </h2>
+
+                </div>
+
+
+                <div class="stackly-billing-activity-list">
+
+
+                    <div class="stackly-billing-activity-item">
+
+                        <div class="stackly-billing-activity-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="stackly-billing-activity-info">
+
+                            <strong>
+                                Payment received
+                            </strong>
+
+                            <p>
+                                Invoice #STK-2026-007 was successfully paid.
+                            </p>
+
+                            <time>
+                                Aug 20, 2026 · 11:35 AM
+                            </time>
+
+                        </div>
+
+                        <strong class="stackly-billing-activity-amount">
+                            + ₹32,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stackly-billing-activity-item">
+
+                        <div class="stackly-billing-activity-icon">
+                            <i class="fa-solid fa-file-circle-plus"></i>
+                        </div>
+
+                        <div class="stackly-billing-activity-info">
+
+                            <strong>
+                                New invoice generated
+                            </strong>
+
+                            <p>
+                                Invoice #STK-2026-008 was added to your account.
+                            </p>
+
+                            <time>
+                                Sep 05, 2026 · 09:15 AM
+                            </time>
+
+                        </div>
+
+                        <strong class="stackly-billing-activity-amount">
+                            ₹24,500
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stackly-billing-activity-item">
+
+                        <div class="stackly-billing-activity-icon">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+
+                        <div class="stackly-billing-activity-info">
+
+                            <strong>
+                                Invoice downloaded
+                            </strong>
+
+                            <p>
+                                Invoice #STK-2026-006 was downloaded.
+                            </p>
+
+                            <time>
+                                Aug 06, 2026 · 02:42 PM
+                            </time>
+
+                        </div>
+
+                        <strong class="stackly-billing-activity-amount">
+                            ₹18,500
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT METHOD
+            ================================================== -->
+
+            <section
+                class="stackly-payment-method-area"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <div class="stackly-payment-method-copy">
+
+                    <span>
+                        PAYMENT OPTIONS
+                    </span>
+
+                    <h2>
+                        Manage your preferred payment method.
+                    </h2>
+
+                    <p>
+                        Keep your billing process convenient by
+                        maintaining your preferred payment option.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-payment-method-card">
+
+                    <div class="stackly-payment-method-icon">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+                    <div class="stackly-payment-method-info">
+
+                        <span>
+                            PRIMARY METHOD
+                        </span>
+
+                        <strong>
+                            Bank Transfer
+                        </strong>
+
+                        <small>
+                            Available for invoice payments
+                        </small>
+
+                    </div>
+
+                    <span class="stackly-payment-method-status">
+                        Active
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BILLING SUPPORT CTA
+            ================================================== -->
+
+            <section
+                class="stackly-billing-support"
+                data-aos="zoom-in"
+                data-aos-duration="1000">
+
+                <div class="stackly-billing-support-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <div class="stackly-billing-support-copy">
+
+                    <span>
+                        BILLING SUPPORT
+                    </span>
+
+                    <h2>
+                        Have a question about an invoice?
+                    </h2>
+
+                    <p>
+                        Contact our team if you need clarification
+                        about charges, payments or billing records.
+                    </p>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-billing-support-button">
+
+                    Contact Billing Team
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+</main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         ADMIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+   
+
+</body>

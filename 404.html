@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly - Page Not Found"
+    >
+
+    <meta
+        name="keywords"
+        content="Stackly, 404, Page Not Found, IT Solutions"
+    >
+
+    <meta
+        name="author"
+        content="Stackly"
+    >
+
+    <meta
+        name="robots"
+        content="noindex, nofollow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ====================================================== -->
+
+    <title>
+        Stackly | 404 - Page Not Found
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         404 PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="404.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         404 PAGE
+    ====================================================== -->
+
+    <main class="stackly-404-page">
+
+
+        <!-- =================================================
+             DECORATIVE ELEMENTS
+        ================================================== -->
+
+        <div
+            class="stackly-404-circle stackly-404-circle-one"
+        ></div>
+
+
+        <div
+            class="stackly-404-circle stackly-404-circle-two"
+        ></div>
+
+
+        <div
+            class="stackly-404-circle stackly-404-circle-three"
+        ></div>
+
+
+        <!-- =================================================
+             404 CONTENT
+        ================================================== -->
+
+        <div class="stackly-404-content">
+
+
+            <!-- LABEL -->
+
+            <div
+                class="stackly-404-label"
+                data-aos="fade-down"
+                data-aos-duration="800"
+            >
+                Page Not Found
+            </div>
+
+
+            <!-- 404 NUMBER -->
+
+            <div
+                class="stackly-404-number"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+            >
+                404
+            </div>
+
+
+            <!-- HEADING -->
+
+            <h1
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="200"
+            >
+                Oops! This page
+                <span>doesn't exist.</span>
+            </h1>
+
+
+            <!-- DESCRIPTION -->
+
+            <p
+                class="stackly-404-description"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="300"
+            >
+                The page you are looking for may have been moved,
+                deleted, or the URL may be incorrect.
+                Don't worry, you can return to the homepage
+                or go back to the previous page.
+            </p>
+
+
+            <!-- =================================================
+                 BUTTONS
+            ================================================== -->
+
+            <div
+                class="stackly-404-buttons"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="400"
+            >
+
+
+                <!-- GO HOME -->
+
+                <a
+                    href="index.html"
+                    class="stackly-404-button stackly-404-home-button"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+                        Go Home
+                    </span>
+
+                </a>
+
+
+                <!-- GO BACK -->
+
+                <a
+                    href="javascript:void(0)"
+                    class="stackly-404-button stackly-404-back-button"
+                    onclick="stacklyGoBack()"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span>
+                        Go Back
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTTOM TEXT
+            ================================================== -->
+
+            <div
+                class="stackly-404-bottom-text"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="500"
+            >
+                Stackly Digital Solutions
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         404 JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           AOS INITIALIZATION
+        ====================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                AOS.init({
+
+                    duration: 1000,
+
+                    easing:
+                        "ease-out-cubic",
+
+                    once: true,
+
+                    mirror: false,
+
+                    offset: 60
+
+                });
+
+            }
+        );
+
+
+        /* =====================================================
+           GO BACK FUNCTION
+        ====================================================== */
+
+        function stacklyGoBack() {
+
+            /*
+             * If browser history contains a previous page,
+             * return to it.
+             */
+
+            if (window.history.length > 1) {
+
+                window.history.back();
+
+            } else {
+
+                /*
+                 * If there is no previous page,
+                 * send the visitor to the homepage.
+                 */
+
+                window.location.href =
+                    "index.html";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

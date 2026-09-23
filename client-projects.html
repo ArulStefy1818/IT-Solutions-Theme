@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | My Projects</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Projects Dashboard for tracking active projects, milestones, progress and project updates.">
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         CLIENT CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>
+                    Client Account
+                </h3>
+
+                <span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    Active Client
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 MY PROJECTS
+            ================================================== -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 SERVICES
+            ================================================== -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 MESSAGES
+            ================================================== -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-message"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 INVOICES
+            ================================================== -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 DOCUMENTS
+            ================================================== -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                        <strong>
+                            Client Account
+                        </strong>
+
+                        <span id="stacklyClientEmail">
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             PROJECT PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-admin-content">
+
+
+            <!-- =================================================
+                 PROJECTS HERO / INTRO
+            ================================================== -->
+
+            <section
+                class="stackly-projects-intro-section"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+
+                <div class="stackly-projects-intro-content">
+
+                    <span class="stackly-projects-intro-label">
+                        PROJECT WORKSPACE
+                    </span>
+
+                    <h2>
+                        Your projects,
+                        <strong>all in one place.</strong>
+                    </h2>
+
+                    <p>
+                        Monitor progress, review milestones, explore
+                        deliverables and stay updated on every stage
+                        of your digital projects.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stackly-projects-intro-visual">
+
+                    <div
+                        class="stackly-projects-intro-orbit orbit-one">
+                    </div>
+
+                    <div
+                        class="stackly-projects-intro-orbit orbit-two">
+                    </div>
+
+                    <div class="stackly-projects-intro-icon">
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROJECT SUMMARY CARDS
+            ================================================== -->
+
+            <section class="stackly-projects-summary-section">
+
+
+                <!-- SUMMARY 01 -->
+
+                <div
+                    class="stackly-project-summary-box"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <div class="stackly-project-summary-symbol">
+
+                        <i class="fa-solid fa-spinner"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            IN PROGRESS
+                        </span>
+
+                        <h3>
+                            06
+                        </h3>
+
+                        <p>
+                            Projects currently active
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUMMARY 02 -->
+
+                <div
+                    class="stackly-project-summary-box"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <div class="stackly-project-summary-symbol">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            MILESTONES
+                        </span>
+
+                        <h3>
+                            24
+                        </h3>
+
+                        <p>
+                            Milestones completed
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUMMARY 03 -->
+
+                <div
+                    class="stackly-project-summary-box"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="stackly-project-summary-symbol">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            DEADLINES
+                        </span>
+
+                        <h3>
+                            03
+                        </h3>
+
+                        <p>
+                            Upcoming this month
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUMMARY 04 -->
+
+                <div
+                    class="stackly-project-summary-box"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+
+                    <div class="stackly-project-summary-symbol">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMPLETION
+                        </span>
+
+                        <h3>
+                            78%
+                        </h3>
+
+                        <p>
+                            Overall project progress
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTIVE PROJECT BOARD
+            ================================================== -->
+
+            <section class="stackly-project-board-section">
+
+
+                <!-- PROJECT BOARD HEADER -->
+
+                <div
+                    class="stackly-project-board-heading"
+                    data-aos="fade-right">
+
+
+                    <div>
+
+                        <span>
+                            ACTIVE WORK
+                        </span>
+
+                        <h2>
+                            Projects in progress
+                        </h2>
+
+                        <p>
+                            Follow the latest progress across your
+                            active digital projects.
+                        </p>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        class="stackly-project-filter-button">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                        Filter Projects
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- PROJECT GRID -->
+
+                <div class="stackly-project-board-grid">
+
+
+                    <!-- =================================================
+                         PROJECT CARD 01
+                    ================================================== -->
+
+                    <article
+                        class="stackly-modern-project-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+
+                        <div class="stackly-modern-project-top">
+
+
+                            <div class="stackly-modern-project-brand">
+
+                                <div class="stackly-modern-project-logo">
+
+                                    <i class="fa-solid fa-globe"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        WEB DEVELOPMENT
+                                    </span>
+
+                                    <h3>
+                                        Business Website
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <span
+                                class="stackly-project-status status-progress">
+
+                                In Progress
+
+                            </span>
+
+                        </div>
+
+
+
+                        <p class="stackly-modern-project-description">
+
+                            Corporate website development with
+                            responsive layouts, CMS integration
+                            and performance optimization.
+
+                        </p>
+
+
+
+                        <!-- PROGRESS -->
+
+                        <div class="stackly-project-progress-area">
+
+
+                            <div
+                                class="stackly-project-progress-heading">
+
+                                <span>
+                                    Project Progress
+                                </span>
+
+                                <strong>
+                                    78%
+                                </strong>
+
+                            </div>
+
+
+                            <div
+                                class="stackly-project-progress-track">
+
+                                <span
+                                    class="stackly-project-progress-value"
+                                    style="width:78%;">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- META -->
+
+                        <div class="stackly-project-card-meta">
+
+
+                            <div>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span>
+                                    Due Sep 30, 2026
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-list-check"></i>
+
+                                <span>
+                                    12 Tasks
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FOOTER -->
+
+                        <div class="stackly-project-card-footer">
+
+                            <span>
+                                Last updated 2 hours ago
+                            </span>
+
+                            <a href="404-client.html">
+
+                                View Project
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PROJECT CARD 02
+                    ================================================== -->
+
+                    <article
+                        class="stackly-modern-project-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+
+                        <div class="stackly-modern-project-top">
+
+
+                            <div class="stackly-modern-project-brand">
+
+                                <div class="stackly-modern-project-logo">
+
+                                    <i
+                                        class="fa-solid fa-mobile-screen-button">
+                                    </i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        MOBILE DEVELOPMENT
+                                    </span>
+
+                                    <h3>
+                                        Mobile Application
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <span
+                                class="stackly-project-status status-review">
+
+                                Review
+
+                            </span>
+
+                        </div>
+
+
+
+                        <p class="stackly-modern-project-description">
+
+                            Cross-platform mobile application focused
+                            on intuitive user experience and secure
+                            account access.
+
+                        </p>
+
+
+
+                        <!-- PROGRESS -->
+
+                        <div class="stackly-project-progress-area">
+
+
+                            <div
+                                class="stackly-project-progress-heading">
+
+                                <span>
+                                    Project Progress
+                                </span>
+
+                                <strong>
+                                    56%
+                                </strong>
+
+                            </div>
+
+
+                            <div
+                                class="stackly-project-progress-track">
+
+                                <span
+                                    class="stackly-project-progress-value"
+                                    style="width:56%;">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- META -->
+
+                        <div class="stackly-project-card-meta">
+
+
+                            <div>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span>
+                                    Due Oct 18, 2026
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-list-check"></i>
+
+                                <span>
+                                    18 Tasks
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FOOTER -->
+
+                        <div class="stackly-project-card-footer">
+
+                            <span>
+                                Updated yesterday
+                            </span>
+
+                            <a href="404-client.html">
+
+                                View Project
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PROJECT CARD 03
+                    ================================================== -->
+
+                    <article
+                        class="stackly-modern-project-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+
+
+                        <div class="stackly-modern-project-top">
+
+
+                            <div class="stackly-modern-project-brand">
+
+                                <div class="stackly-modern-project-logo">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        DIGITAL MARKETING
+                                    </span>
+
+                                    <h3>
+                                        Growth Campaign
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <span
+                                class="stackly-project-status status-active">
+
+                                Active
+
+                            </span>
+
+                        </div>
+
+
+
+                        <p class="stackly-modern-project-description">
+
+                            Multi-channel digital campaign focused on
+                            improving brand visibility, engagement and
+                            qualified leads.
+
+                        </p>
+
+
+
+                        <!-- PROGRESS -->
+
+                        <div class="stackly-project-progress-area">
+
+
+                            <div
+                                class="stackly-project-progress-heading">
+
+                                <span>
+                                    Campaign Progress
+                                </span>
+
+                                <strong>
+                                    91%
+                                </strong>
+
+                            </div>
+
+
+                            <div
+                                class="stackly-project-progress-track">
+
+                                <span
+                                    class="stackly-project-progress-value"
+                                    style="width:91%;">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- META -->
+
+                        <div class="stackly-project-card-meta">
+
+
+                            <div>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span>
+                                    Due Oct 05, 2026
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-bullseye"></i>
+
+                                <span>
+                                    08 Goals
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FOOTER -->
+
+                        <div class="stackly-project-card-footer">
+
+                            <span>
+                                Updated 4 hours ago
+                            </span>
+
+                            <a href="404-client.html">
+
+                                View Project
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROJECT TIMELINE
+            ================================================== -->
+
+            <section
+                class="stackly-project-timeline-section"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+
+                <div class="stackly-project-section-title">
+
+                    <span>
+                        PROJECT JOURNEY
+                    </span>
+
+                    <h2>
+                        Development timeline
+                    </h2>
+
+                    <p>
+                        A simple view of the major stages completed
+                        and upcoming throughout your project lifecycle.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stackly-project-timeline">
+
+
+                    <!-- TIMELINE 01 -->
+
+                    <div
+                        class="stackly-project-timeline-item completed">
+
+
+                        <div class="stackly-project-timeline-marker">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+
+                        <div
+                            class="stackly-project-timeline-content">
+
+                            <span>
+                                COMPLETED
+                            </span>
+
+                            <h3>
+                                Discovery &amp; Planning
+                            </h3>
+
+                            <p>
+                                Requirements, goals and project
+                                direction were finalized with the team.
+                            </p>
+
+                            <small>
+                                September 05, 2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIMELINE 02 -->
+
+                    <div
+                        class="stackly-project-timeline-item completed">
+
+
+                        <div class="stackly-project-timeline-marker">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+
+                        <div
+                            class="stackly-project-timeline-content">
+
+                            <span>
+                                COMPLETED
+                            </span>
+
+                            <h3>
+                                UI / UX Design
+                            </h3>
+
+                            <p>
+                                Interface layouts, visual direction
+                                and user experience flows were prepared.
+                            </p>
+
+                            <small>
+                                September 10, 2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIMELINE 03 -->
+
+                    <div
+                        class="stackly-project-timeline-item current">
+
+
+                        <div class="stackly-project-timeline-marker">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+
+                        <div
+                            class="stackly-project-timeline-content">
+
+                            <span>
+                                CURRENT STAGE
+                            </span>
+
+                            <h3>
+                                Development
+                            </h3>
+
+                            <p>
+                                Core features are currently being
+                                developed, tested and integrated.
+                            </p>
+
+                            <small>
+                                In progress
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIMELINE 04 -->
+
+                    <div
+                        class="stackly-project-timeline-item upcoming">
+
+
+                        <div class="stackly-project-timeline-marker">
+
+                            <i class="fa-solid fa-rocket"></i>
+
+                        </div>
+
+
+                        <div
+                            class="stackly-project-timeline-content">
+
+                            <span>
+                                UPCOMING
+                            </span>
+
+                            <h3>
+                                Testing &amp; Launch
+                            </h3>
+
+                            <p>
+                                Final testing, quality checks and
+                                production deployment will follow
+                                development.
+                            </p>
+
+                            <small>
+                                Planned
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROJECT HEALTH
+            ================================================== -->
+
+            <section
+                class="stackly-project-health-section"
+                data-aos="fade-up">
+
+
+                <div class="stackly-project-health-content">
+
+                    <span>
+                        PROJECT HEALTH
+                    </span>
+
+                    <h2>
+                        Everything is moving
+                        <strong>in the right direction.</strong>
+                    </h2>
+
+                    <p>
+                        Your current projects are progressing through
+                        their planned stages with active communication
+                        between the project team and client workspace.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stackly-project-health-metrics">
+
+
+                    <!-- HEALTH 01 -->
+
+                    <div class="stackly-health-metric">
+
+                        <div class="stackly-health-metric-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                92%
+                            </strong>
+
+                            <span>
+                                Team Activity
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HEALTH 02 -->
+
+                    <div class="stackly-health-metric">
+
+                        <div class="stackly-health-metric-icon">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                87%
+                            </strong>
+
+                            <span>
+                                Communication
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HEALTH 03 -->
+
+                    <div class="stackly-health-metric">
+
+                        <div class="stackly-health-metric-icon">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                94%
+                            </strong>
+
+                            <span>
+                                Schedule
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 UPCOMING MILESTONES
+            ================================================== -->
+
+            <section
+                class="stackly-upcoming-milestones-section"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+
+                <div class="stackly-milestones-heading">
+
+
+                    <div>
+
+                        <span>
+                            NEXT STEPS
+                        </span>
+
+                        <h2>
+                            Upcoming milestones
+                        </h2>
+
+                    </div>
+
+
+
+                    <a href="404-client.html">
+
+                        View Timeline
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="stackly-milestone-grid">
+
+
+                    <!-- MILESTONE 01 -->
+
+                    <div class="stackly-milestone-card">
+
+
+                        <div class="stackly-milestone-date">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="stackly-milestone-info">
+
+                            <span>
+                                BUSINESS WEBSITE
+                            </span>
+
+                            <h3>
+                                Homepage Approval
+                            </h3>
+
+                            <p>
+                                Final review of the homepage design
+                                and responsive layouts.
+                            </p>
+
+                        </div>
+
+
+
+                        <a href="404-client.html"><i class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+
+
+
+                    <!-- MILESTONE 02 -->
+
+                    <div class="stackly-milestone-card">
+
+
+                        <div class="stackly-milestone-date">
+
+                            <strong>
+                                04
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="stackly-milestone-info">
+
+                            <span>
+                                MOBILE APPLICATION
+                            </span>
+
+                            <h3>
+                                Beta Testing
+                            </h3>
+
+                            <p>
+                                Initial application build will be
+                                available for client testing.
+                            </p>
+
+                        </div>
+
+
+
+                        <a href="404-client.html"><i class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+
+
+
+                    <!-- MILESTONE 03 -->
+
+                    <div class="stackly-milestone-card">
+
+
+                        <div class="stackly-milestone-date">
+
+                            <strong>
+                                11
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="stackly-milestone-info">
+
+                            <span>
+                                DIGITAL MARKETING
+                            </span>
+
+                            <h3>
+                                Campaign Report
+                            </h3>
+
+                            <p>
+                                Monthly campaign performance
+                                and analytics report.
+                            </p>
+
+                        </div>
+
+
+
+                        <a href="404-client.html"><i class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CLIENT PROJECT CTA
+            ================================================== -->
+
+            <section
+                class="stackly-project-client-cta"
+                data-aos="zoom-in"
+                data-aos-duration="900">
+
+
+                <div class="stackly-project-cta-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+
+
+                <div class="stackly-project-cta-content">
+
+                    <span>
+                        NEED AN UPDATE?
+                    </span>
+
+                    <h2>
+                        Have a question about your project?
+                    </h2>
+
+                    <p>
+                        Send a message to your Stackly project team
+                        and we'll keep you updated on the latest
+                        progress.
+                    </p>
+
+                </div>
+
+
+
+                <a
+                    href="404-client.html"
+                    class="stackly-project-cta-button">
+
+                    Contact Team
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+
+    <!-- =========================================================
+         CLIENT JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

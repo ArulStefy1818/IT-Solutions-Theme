@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Dashboard"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+    <span>ADMINISTRATOR</span>
+
+    <strong id="stacklyAdminUserName">
+        Stackly Admin
+    </strong>
+
+</div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>Services</span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>Messages</span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <!-- LOGOUT -->
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button></a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>LOGGED IN AS</span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY IT SOLUTIONS
+     ADMIN SERVICES - PREMIUM SERVICE COMMAND CENTER
+========================================================= -->
+
+<div class="stackly-service-command-page">
+
+
+    <!-- =====================================================
+         01. SERVICES INTRO / COMMAND HERO
+    ====================================================== -->
+
+    <section class="stackly-service-intro">
+
+        <div class="stackly-service-intro-grid"></div>
+
+        <div class="stackly-service-intro-glow service-glow-left"></div>
+        <div class="stackly-service-intro-glow service-glow-right"></div>
+
+        <div
+            class="stackly-service-intro-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+
+            <span class="stackly-service-kicker">
+                <i class="fa-solid fa-bolt"></i>
+                STACKLY DIGITAL SERVICES
+            </span>
+
+            <h2>
+                Technology that
+                <strong>moves business forward.</strong>
+            </h2>
+
+            <p>
+                From strategy and design to development, automation and
+                intelligent digital experiences, Stackly delivers technology
+                solutions built around measurable business outcomes.
+            </p>
+
+            <div class="stackly-service-intro-actions">
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-service-main-btn"
+                >
+                    <span>Explore Services</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-service-outline-btn"
+                >
+                    <i class="fa-solid fa-file-lines"></i>
+                    Service Reports
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO DATA PANEL -->
+
+        <div
+            class="stackly-service-command-panel"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+        >
+
+            <div class="service-command-header">
+
+                <div>
+                    <span>SERVICE ENGINE</span>
+                    <strong>ONLINE</strong>
+                </div>
+
+                <span class="service-command-live">
+                    <i></i>
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="service-command-core">
+
+                <div class="service-core-ring ring-one"></div>
+                <div class="service-core-ring ring-two"></div>
+
+                <div class="service-core-center">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <strong>08</strong>
+
+                    <span>
+                        ACTIVE
+                        <br>
+                        SERVICES
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-command-stats">
+
+                <div>
+                    <span>Active Clients</span>
+                    <strong>32</strong>
+                </div>
+
+                <div>
+                    <span>Delivery Rate</span>
+                    <strong>96%</strong>
+                </div>
+
+                <div>
+                    <span>Projects</span>
+                    <strong>48</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         02. SERVICE PERFORMANCE STRIP
+    ====================================================== -->
+
+    <section
+        class="stackly-service-performance"
+        data-aos="fade-up"
+    >
+
+        <div class="service-performance-item">
+
+            <div class="service-performance-icon orange">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <div>
+                <span>ACTIVE SERVICES</span>
+                <strong>08</strong>
+            </div>
+
+        </div>
+
+
+        <div class="service-performance-item">
+
+            <div class="service-performance-icon yellow">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+                <span>CLIENT ACCOUNTS</span>
+                <strong>32</strong>
+            </div>
+
+        </div>
+
+
+        <div class="service-performance-item">
+
+            <div class="service-performance-icon green">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+                <span>SUCCESS RATE</span>
+                <strong>96%</strong>
+            </div>
+
+        </div>
+
+
+        <div class="service-performance-item">
+
+            <div class="service-performance-icon blue">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+                <span>SUPPORT COVERAGE</span>
+                <strong>24/7</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         03. DIGITAL SERVICE ECOSYSTEM
+    ====================================================== -->
+
+    <section class="stackly-service-ecosystem">
+
+        <div
+            class="stackly-service-section-title"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    <i class="fa-solid fa-grid-2"></i>
+                    OUR CAPABILITIES
+                </span>
+
+                <h3>
+                    One team.
+                    <strong>Multiple digital capabilities.</strong>
+                </h3>
+
+                <p>
+                    Explore the core services powering Stackly's digital
+                    delivery ecosystem.
+                </p>
+
+            </div>
+
+            <a
+                href="404-admin.html"
+                class="stackly-service-title-link"
+            >
+                View Service Catalog
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-service-ecosystem-grid">
+
+
+            <!-- SERVICE 01 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-orange"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="service-feature-number">
+                    01
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    DEVELOPMENT
+                </span>
+
+                <h4>
+                    Web Development
+                </h4>
+
+                <p>
+                    High-performance websites and web applications
+                    engineered for modern digital businesses.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>React</span>
+                    <span>Node</span>
+                    <span>API</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- SERVICE 02 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-blue"
+                data-aos="fade-up"
+                data-aos-delay="180"
+            >
+
+                <div class="service-feature-number">
+                    02
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    MOBILE
+                </span>
+
+                <h4>
+                    Mobile Application
+                </h4>
+
+                <p>
+                    Scalable mobile experiences designed to connect
+                    customers, teams and digital products.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>AI</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- SERVICE 03 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-purple"
+                data-aos="fade-up"
+                data-aos-delay="260"
+            >
+
+                <div class="service-feature-number">
+                    03
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    INTELLIGENCE
+                </span>
+
+                <h4>
+                    AI & Automation
+                </h4>
+
+                <p>
+                    Intelligent automation systems that reduce repetitive
+                    work and unlock smarter business decisions.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>AI</span>
+                    <span>Python</span>
+                    <span>ML</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- SERVICE 04 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-green"
+                data-aos="fade-up"
+                data-aos-delay="340"
+            >
+
+                <div class="service-feature-number">
+                    04
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    INFRASTRUCTURE
+                </span>
+
+                <h4>
+                    Cloud Solutions
+                </h4>
+
+                <p>
+                    Secure cloud infrastructure designed for reliability,
+                    scalability and continuous digital operations.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>AWS</span>
+                    <span>Azure</span>
+                    <span>DevOps</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- SERVICE 05 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-yellow"
+                data-aos="fade-up"
+                data-aos-delay="420"
+            >
+
+                <div class="service-feature-number">
+                    05
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    EXPERIENCE
+                </span>
+
+                <h4>
+                    UI / UX Design
+                </h4>
+
+                <p>
+                    Purposeful interfaces and digital experiences built
+                    around clarity, usability and conversion.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>Figma</span>
+                    <span>UX</span>
+                    <span>UI</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- SERVICE 06 -->
+
+            <article
+                class="stackly-service-feature-card service-accent-pink"
+                data-aos="fade-up"
+                data-aos-delay="500"
+            >
+
+                <div class="service-feature-number">
+                    06
+                </div>
+
+                <div class="service-feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <span class="service-feature-label">
+                    DATA
+                </span>
+
+                <h4>
+                    Analytics & BI
+                </h4>
+
+                <p>
+                    Transform complex business data into clear dashboards,
+                    reports and actionable intelligence.
+                </p>
+
+                <div class="service-feature-tags">
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Cloud</span>
+                </div>
+
+                <a href="404-admin.html">
+                    Explore Service
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         04. SERVICE DELIVERY FLOW
+    ====================================================== -->
+
+    <section class="stackly-service-delivery">
+
+        <div
+            class="stackly-service-delivery-heading"
+            data-aos="fade-right"
+        >
+
+            <span>
+                HOW WE WORK
+            </span>
+
+            <h3>
+                From first idea
+                <strong>to final delivery.</strong>
+            </h3>
+
+            <p>
+                Every engagement follows a structured digital delivery
+                system designed to keep teams aligned and projects moving.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-service-flow">
+
+            <div
+                class="service-flow-line"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                class="service-flow-node"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="service-flow-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <span>01</span>
+
+                <h4>
+                    Discover
+                </h4>
+
+                <p>
+                    Understand goals, challenges and requirements.
+                </p>
+
+            </div>
+
+
+            <div
+                class="service-flow-node"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="service-flow-icon">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+
+                <span>02</span>
+
+                <h4>
+                    Strategize
+                </h4>
+
+                <p>
+                    Build the right technology and execution strategy.
+                </p>
+
+            </div>
+
+
+            <div
+                class="service-flow-node"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+
+                <div class="service-flow-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <span>03</span>
+
+                <h4>
+                    Build
+                </h4>
+
+                <p>
+                    Design, develop and integrate the solution.
+                </p>
+
+            </div>
+
+
+            <div
+                class="service-flow-node"
+                data-aos="fade-up"
+                data-aos-delay="400"
+            >
+
+                <div class="service-flow-icon">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+
+                <span>04</span>
+
+                <h4>
+                    Validate
+                </h4>
+
+                <p>
+                    Test quality, performance and user experience.
+                </p>
+
+            </div>
+
+
+            <div
+                class="service-flow-node"
+                data-aos="fade-up"
+                data-aos-delay="500"
+            >
+
+                <div class="service-flow-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <span>05</span>
+
+                <h4>
+                    Launch
+                </h4>
+
+                <p>
+                    Deploy, monitor and continuously improve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         05. TECHNOLOGY CAPABILITY MATRIX
+    ====================================================== -->
+
+    <section class="stackly-service-capability">
+
+        <div
+            class="stackly-service-capability-heading"
+            data-aos="fade-up"
+        >
+
+            <span>
+                TECHNOLOGY CAPABILITY
+            </span>
+
+            <h3>
+                Built with the
+                <strong>right technology.</strong>
+            </h3>
+
+            <p>
+                Our technology capabilities cover development, cloud,
+                data, design and intelligent automation.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-service-capability-layout">
+
+
+            <!-- LEFT -->
+
+            <div
+                class="service-capability-visual"
+                data-aos="zoom-in"
+            >
+
+                <div class="capability-orbit orbit-large"></div>
+                <div class="capability-orbit orbit-medium"></div>
+                <div class="capability-orbit orbit-small"></div>
+
+                <div class="capability-center">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <strong>
+                        STACKLY
+                    </strong>
+
+                    <span>
+                        TECHNOLOGY
+                    </span>
+
+                </div>
+
+
+                <span class="capability-floating-icon capability-react">
+                    <i class="fa-brands fa-react"></i>
+                </span>
+
+                <span class="capability-floating-icon capability-python">
+                    <i class="fa-brands fa-python"></i>
+                </span>
+
+                <span class="capability-floating-icon capability-aws">
+                    <i class="fa-brands fa-aws"></i>
+                </span>
+
+                <span class="capability-floating-icon capability-figma">
+                    <i class="fa-brands fa-figma"></i>
+                </span>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div
+                class="service-capability-list"
+                data-aos="fade-left"
+            >
+
+                <div class="capability-row">
+
+                    <div class="capability-row-icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+
+                    <div>
+                        <strong>Frontend Engineering</strong>
+                        <span>React · HTML · CSS · JavaScript</span>
+                    </div>
+
+                    <b>92%</b>
+
+                </div>
+
+
+                <div class="capability-row">
+
+                    <div class="capability-row-icon">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+
+                    <div>
+                        <strong>Backend Engineering</strong>
+                        <span>Node.js · APIs · Databases</span>
+                    </div>
+
+                    <b>88%</b>
+
+                </div>
+
+
+                <div class="capability-row">
+
+                    <div class="capability-row-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <div>
+                        <strong>AI & Data Engineering</strong>
+                        <span>Python · ML · Analytics</span>
+                    </div>
+
+                    <b>84%</b>
+
+                </div>
+
+
+                <div class="capability-row">
+
+                    <div class="capability-row-icon">
+                        <i class="fa-brands fa-aws"></i>
+                    </div>
+
+                    <div>
+                        <strong>Cloud Infrastructure</strong>
+                        <span>AWS · DevOps · Deployment</span>
+                    </div>
+
+                    <b>91%</b>
+
+                </div>
+
+
+                <div class="capability-row">
+
+                    <div class="capability-row-icon">
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+
+                    <div>
+                        <strong>Product Design</strong>
+                        <span>Figma · UX · UI Systems</span>
+                    </div>
+
+                    <b>95%</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         06. SERVICE IMPACT
+    ====================================================== -->
+
+    <section class="stackly-service-impact">
+
+        <div
+            class="stackly-service-impact-header"
+            data-aos="fade-up"
+        >
+
+            <span>
+                SERVICE IMPACT
+            </span>
+
+            <h3>
+                Designed for
+                <strong>measurable outcomes.</strong>
+            </h3>
+
+        </div>
+
+
+        <div class="stackly-service-impact-grid">
+
+
+            <div
+                class="service-impact-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="impact-card-top">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>PERFORMANCE</span>
+                </div>
+
+                <strong>+42%</strong>
+
+                <p>
+                    Average improvement in digital workflow efficiency.
+                </p>
+
+                <div class="impact-mini-bar">
+                    <span style="width:82%;"></span>
+                </div>
+
+            </div>
+
+
+            <div
+                class="service-impact-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="impact-card-top">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>DELIVERY</span>
+                </div>
+
+                <strong>28 Days</strong>
+
+                <p>
+                    Average delivery cycle for focused digital projects today.
+                </p>
+
+                <div class="impact-mini-bar">
+                    <span style="width:76%;"></span>
+                </div>
+
+            </div>
+
+
+            <div
+                class="service-impact-card"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+
+                <div class="impact-card-top">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <span>SATISFACTION</span>
+                </div>
+
+                <strong>94%</strong>
+
+                <p>
+                    Client satisfaction across active service engagements.
+                </p>
+
+                <div class="impact-mini-bar">
+                    <span style="width:94%;"></span>
+                </div>
+
+            </div>
+
+
+            <div
+                class="service-impact-card"
+                data-aos="fade-up"
+                data-aos-delay="400"
+            >
+
+                <div class="impact-card-top">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>CONTINUOUS</span>
+                </div>
+
+                <strong>24/7</strong>
+
+                <p>
+                    Monitoring and support for critical digital systems.
+                </p>
+
+                <div class="impact-mini-bar">
+                    <span style="width:97%;"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         07. SERVICE OPERATIONS PANEL
+    ====================================================== -->
+
+    <section class="stackly-service-operations">
+
+        <div
+            class="service-operations-card"
+            data-aos="fade-right"
+        >
+
+            <div class="operations-heading">
+
+                <div>
+
+                    <span>
+                        SERVICE OPERATIONS
+                    </span>
+
+                    <h3>
+                        Everything
+                        <strong>under control.</strong>
+                    </h3>
+
+                </div>
+
+                <div class="operations-status">
+                    <i></i>
+                    OPERATIONAL
+                </div>
+
+            </div>
+
+
+            <div class="operations-list">
+
+                <div class="operations-item">
+
+                    <div class="operations-item-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+
+                    <div>
+                        <strong>Infrastructure</strong>
+                        <span>All systems operational</span>
+                    </div>
+
+                    <b>99.9%</b>
+
+                </div>
+
+
+                <div class="operations-item">
+
+                    <div class="operations-item-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Security</strong>
+                        <span>Protected environments</span>
+                    </div>
+
+                    <b>100%</b>
+
+                </div>
+
+
+                <div class="operations-item">
+
+                    <div class="operations-item-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div>
+                        <strong>Data Systems</strong>
+                        <span>Healthy data pipelines</span>
+                    </div>
+
+                    <b>98%</b>
+
+                </div>
+
+
+                <div class="operations-item">
+
+                    <div class="operations-item-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <strong>Support</strong>
+                        <span>Response team available</span>
+                    </div>
+
+                    <b>24/7</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="service-operations-message"
+            data-aos="fade-left"
+        >
+
+            <div class="operations-message-icon">
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+            <span>
+                READY FOR THE NEXT PROJECT?
+            </span>
+
+            <h3>
+                Turn your next idea
+                <strong>into something real.</strong>
+            </h3>
+
+            <p>
+                Bring your challenge, product idea or digital requirement.
+                Stackly's service teams are ready to help build the next
+                stage of your business.
+            </p>
+
+            <a
+                href="404-admin.html"
+                class="operations-message-btn"
+            >
+                Start a Project
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         08. SERVICE FOOTER CTA
+    ====================================================== -->
+
+    <section
+        class="stackly-service-final-cta"
+        data-aos="zoom-in"
+    >
+
+        <div class="service-final-pattern"></div>
+
+        <div class="service-final-content">
+
+            <span>
+                <i class="fa-solid fa-circle"></i>
+                STACKLY SERVICE NETWORK
+            </span>
+
+            <h3>
+                Build smarter.
+                <strong>Move faster.</strong>
+            </h3>
+
+            <p>
+                A connected technology partner for your next digital
+                transformation.
+            </p>
+
+            <div class="service-final-actions">
+
+                <a
+                    href="404-admin.html"
+                    class="service-final-primary"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Create Service Request
+                </a>
+
+                <a
+                    href="404-admin.html"
+                    class="service-final-secondary"
+                >
+                    View All Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         09. SERVICE PAGE FOOTER
+    ====================================================== -->
+
+    <footer class="stackly-service-page-footer">
+
+        <div class="service-footer-brand">
+
+            <div class="service-footer-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <div>
+                <strong>
+                    Stackly Service Command
+                </strong>
+
+                <span>
+                    Digital capabilities powering modern businesses.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="service-footer-status">
+
+            <span class="footer-status-dot"></span>
+
+            ALL SERVICE SYSTEMS OPERATIONAL
+
+        </div>
+
+    </footer>
+
+
+</div>
+    
+</main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>

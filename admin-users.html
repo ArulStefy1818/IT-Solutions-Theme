@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Dashboard"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+    <span>ADMINISTRATOR</span>
+
+    <strong id="stacklyAdminUserName">
+        Stackly Admin
+    </strong>
+
+</div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>Services</span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>Messages</span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <!-- LOGOUT -->
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button></a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>LOGGED IN AS</span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+    <!-- =====================================================
+         USER MANAGEMENT CONTENT
+    ====================================================== -->
+
+    <div class="stackly-um-page">
+
+
+        <!-- =================================================
+             USER HERO
+        ================================================== -->
+
+        <section
+            class="stackly-um-hero"
+            data-aos="fade-up"
+            data-aos-duration="900"
+        >
+
+            <div class="stackly-um-hero-glow"></div>
+
+            <div class="stackly-um-hero-content">
+
+                <div class="stackly-um-eyebrow">
+
+                    <span></span>
+
+                    STACKLY COMMUNITY
+
+                </div>
+
+                <h2>
+                    Manage every
+                    <strong>
+                        connection.
+                    </strong>
+                </h2>
+
+                <p>
+                    Monitor users, understand activity, manage access
+                    and keep your Stackly community organized from one
+                    powerful workspace.
+                </p>
+
+
+                <div class="stackly-um-hero-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-um-primary-button"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add New User
+
+                    </a>
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-um-secondary-button"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Export Directory
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div
+                class="stackly-um-hero-visual"
+                data-aos="zoom-in"
+                data-aos-duration="1100"
+            >
+
+                <div class="stackly-um-orbit orbit-one"></div>
+
+                <div class="stackly-um-orbit orbit-two"></div>
+
+                <div class="stackly-um-user-orb">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <div class="stackly-um-floating-card card-users">
+
+                    <span>
+                        TOTAL USERS
+                    </span>
+
+                    <strong>
+                        1,248
+                    </strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.5%
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-um-floating-card card-online">
+
+                    <span class="online-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            986
+                        </strong>
+
+                        <small>
+                            Active users
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="stackly-um-stat-grid">
+
+
+            <!-- TOTAL -->
+
+            <article
+                class="stackly-um-stat-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stackly-um-stat-top">
+
+                    <div class="stackly-um-stat-icon orange">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <span class="stackly-um-stat-trend">
+                        +12.5%
+                    </span>
+
+                </div>
+
+                <span class="stackly-um-stat-label">
+                    Total Members
+                </span>
+
+                <strong class="stackly-um-stat-number">
+                    1,248
+                </strong>
+
+                <div class="stackly-um-mini-bar">
+
+                    <span style="width:82%;"></span>
+
+                </div>
+
+                <small>
+                    Community size this month
+                </small>
+
+            </article>
+
+
+            <!-- ACTIVE -->
+
+            <article
+                class="stackly-um-stat-card"
+                data-aos="fade-up"
+                data-aos-delay="180"
+            >
+
+                <div class="stackly-um-stat-top">
+
+                    <div class="stackly-um-stat-icon green">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <span class="stackly-um-stat-live">
+                        LIVE
+                    </span>
+
+                </div>
+
+                <span class="stackly-um-stat-label">
+                    Active Members
+                </span>
+
+                <strong class="stackly-um-stat-number">
+                    986
+                </strong>
+
+                <div class="stackly-um-mini-bar">
+
+                    <span style="width:78%;"></span>
+
+                </div>
+
+                <small>
+                    79% of total members
+                </small>
+
+            </article>
+
+
+            <!-- NEW -->
+
+            <article
+                class="stackly-um-stat-card"
+                data-aos="fade-up"
+                data-aos-delay="260"
+            >
+
+                <div class="stackly-um-stat-top">
+
+                    <div class="stackly-um-stat-icon yellow">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <span class="stackly-um-stat-trend">
+                        +8.4%
+                    </span>
+
+                </div>
+
+                <span class="stackly-um-stat-label">
+                    New This Month
+                </span>
+
+                <strong class="stackly-um-stat-number">
+                    84
+                </strong>
+
+                <div class="stackly-um-mini-bar">
+
+                    <span style="width:64%;"></span>
+
+                </div>
+
+                <small>
+                    New registrations
+                </small>
+
+            </article>
+
+
+            <!-- PENDING -->
+
+            <article
+                class="stackly-um-stat-card"
+                data-aos="fade-up"
+                data-aos-delay="340"
+            >
+
+                <div class="stackly-um-stat-top">
+
+                    <div class="stackly-um-stat-icon red">
+
+                        <i class="fa-solid fa-user-clock"></i>
+
+                    </div>
+
+                    <span class="stackly-um-stat-review">
+                        REVIEW
+                    </span>
+
+                </div>
+
+                <span class="stackly-um-stat-label">
+                    Pending Accounts
+                </span>
+
+                <strong class="stackly-um-stat-number">
+                    27
+                </strong>
+
+                <div class="stackly-um-mini-bar">
+
+                    <span style="width:28%;"></span>
+
+                </div>
+
+                <small>
+                    Require administrator review
+                </small>
+
+            </article>
+
+        </section>
+
+        <!-- =================================================
+             MAIN USER GRID
+        ================================================== -->
+
+        <section class="stackly-um-main-grid">
+
+
+            <!-- =================================================
+                 RECENT USERS
+            ================================================== -->
+
+            <div
+                class="stackly-um-directory-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
+
+                <div class="stackly-um-card-heading">
+
+                    <div>
+
+                        <span>
+                            RECENT MEMBERS
+                        </span>
+
+                        <h3>
+                            Latest registrations
+                        </h3>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        View all
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-um-user-list">
+
+
+                    <!-- USER 1 -->
+
+                    <div class="stackly-um-member-row">
+
+                        <div class="stackly-um-member-avatar avatar-orange">
+                            AM
+                        </div>
+
+                        <div class="stackly-um-member-info">
+
+                            <strong>
+                                Alex Morgan
+                            </strong>
+
+                            <span>
+                                alex.morgan@stackly.com
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-um-member-role">
+                            Admin
+                        </div>
+
+                        <div class="stackly-um-member-status active">
+                            <span></span>
+                            Active
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-um-member-more"
+                            aria-label="View Alex Morgan"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- USER 2 -->
+
+                    <div class="stackly-um-member-row">
+
+                        <div class="stackly-um-member-avatar avatar-purple">
+                            SW
+                        </div>
+
+                        <div class="stackly-um-member-info">
+
+                            <strong>
+                                Sarah Wilson
+                            </strong>
+
+                            <span>
+                                sarah.wilson@stackly.com
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-um-member-role">
+                            Developer
+                        </div>
+
+                        <div class="stackly-um-member-status active">
+                            <span></span>
+                            Active
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-um-member-more"
+                            aria-label="View Sarah Wilson"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- USER 3 -->
+
+                    <div class="stackly-um-member-row">
+
+                        <div class="stackly-um-member-avatar avatar-blue">
+                            DC
+                        </div>
+
+                        <div class="stackly-um-member-info">
+
+                            <strong>
+                                Daniel Carter
+                            </strong>
+
+                            <span>
+                                daniel.carter@stackly.com
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-um-member-role">
+                            Designer
+                        </div>
+
+                        <div class="stackly-um-member-status pending">
+                            <span></span>
+                            Pending
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-um-member-more"
+                            aria-label="View Daniel Carter"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- USER 4 -->
+
+                    <div class="stackly-um-member-row">
+
+                        <div class="stackly-um-member-avatar avatar-pink">
+                            ES
+                        </div>
+
+                        <div class="stackly-um-member-info">
+
+                            <strong>
+                                Emily Stone
+                            </strong>
+
+                            <span>
+                                emily.stone@stackly.com
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-um-member-role">
+                            Client
+                        </div>
+
+                        <div class="stackly-um-member-status inactive">
+                            <span></span>
+                            Inactive
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-um-member-more"
+                            aria-label="View Emily Stone"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- USER 5 -->
+
+                    <div class="stackly-um-member-row">
+
+                        <div class="stackly-um-member-avatar avatar-green">
+                            ML
+                        </div>
+
+                        <div class="stackly-um-member-info">
+
+                            <strong>
+                                Michael Lee
+                            </strong>
+
+                            <span>
+                                michael.lee@stackly.com
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-um-member-role">
+                            Developer
+                        </div>
+
+                        <div class="stackly-um-member-status active">
+                            <span></span>
+                            Active
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-um-member-more"
+                            aria-label="View Michael Lee"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ROLE DISTRIBUTION
+            ================================================== -->
+
+            <div
+                class="stackly-um-role-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+            >
+
+                <div class="stackly-um-card-heading">
+
+                    <div>
+
+                        <span>
+                            USER STRUCTURE
+                        </span>
+
+                        <h3>
+                            Roles
+                        </h3>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="stackly-um-chart-menu"
+                        aria-label="Role chart options"
+                    >
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-um-donut-area">
+
+                    <div class="stackly-um-donut">
+
+                        <div class="stackly-um-donut-center">
+
+                            <strong>
+                                1,248
+                            </strong>
+
+                            <span>
+                                Users
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-um-role-list">
+
+                    <div class="stackly-um-role-item">
+
+                        <span class="role-dot orange"></span>
+
+                        <span>
+                            Developers
+                        </span>
+
+                        <strong>
+                            34%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-role-item">
+
+                        <span class="role-dot yellow"></span>
+
+                        <span>
+                            Clients
+                        </span>
+
+                        <strong>
+                            33%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-role-item">
+
+                        <span class="role-dot purple"></span>
+
+                        <span>
+                            Designers
+                        </span>
+
+                        <strong>
+                            21%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-role-item">
+
+                        <span class="role-dot blue"></span>
+
+                        <span>
+                            Admins
+                        </span>
+
+                        <strong>
+                            12%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACTIVITY + ACCOUNT HEALTH
+        ================================================== -->
+
+        <section class="stackly-um-lower-grid">
+
+
+            <!-- ACTIVITY -->
+
+            <div
+                class="stackly-um-activity-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+            >
+
+                <div class="stackly-um-card-heading">
+
+                    <div>
+
+                        <span>
+                            LIVE FEED
+                        </span>
+
+                        <h3>
+                            Recent activity
+                        </h3>
+
+                    </div>
+
+                    <span class="stackly-um-live-label">
+
+                        <i></i>
+
+                        LIVE
+
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-um-activity-list">
+
+
+                    <div class="stackly-um-activity-item">
+
+                        <div class="stackly-um-activity-icon orange">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New user registered
+                            </strong>
+
+                            <span>
+                                Priya Sharma joined the community
+                            </span>
+
+                        </div>
+
+                        <time>
+                            4 min
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-um-activity-item">
+
+                        <div class="stackly-um-activity-icon green">
+
+                            <i class="fa-solid fa-user-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Account verified
+                            </strong>
+
+                            <span>
+                                James Anderson completed verification
+                            </span>
+
+                        </div>
+
+                        <time>
+                            18 min
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-um-activity-item">
+
+                        <div class="stackly-um-activity-icon yellow">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Role updated
+                            </strong>
+
+                            <span>
+                                Sarah Wilson is now a senior developer
+                            </span>
+
+                        </div>
+
+                        <time>
+                            42 min
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-um-activity-item">
+
+                        <div class="stackly-um-activity-icon blue">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Successful login
+                            </strong>
+
+                            <span>
+                                Michael Lee signed in from Chennai
+                            </span>
+
+                        </div>
+
+                        <time>
+                            1 hr
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT HEALTH -->
+
+            <div
+                class="stackly-um-health-card"
+                data-aos="fade-up"
+                data-aos-delay="180"
+                data-aos-duration="900"
+            >
+
+                <div class="stackly-um-card-heading">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT HEALTH
+                        </span>
+
+                        <h3>
+                            Verification status
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-shield-halved stackly-um-health-shield"></i>
+
+                </div>
+
+
+                <div class="stackly-um-health-score">
+
+                    <div class="stackly-um-health-circle">
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <span>
+                            Healthy
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-um-health-text">
+
+                        <strong>
+                            Excellent account health
+                        </strong>
+
+                        <p>
+                            Most members have completed
+                            their account setup.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-um-health-progress">
+
+                    <div>
+
+                        <span>
+                            Email Verified
+                        </span>
+
+                        <strong>
+                            96%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-progress-line">
+                        <span style="width:96%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-um-health-progress">
+
+                    <div>
+
+                        <span>
+                            Profile Completed
+                        </span>
+
+                        <strong>
+                            88%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-progress-line">
+                        <span style="width:88%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-um-health-progress">
+
+                    <div>
+
+                        <span>
+                            Two-Factor Enabled
+                        </span>
+
+                        <strong>
+                            81%
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-um-progress-line">
+                        <span style="width:81%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             USER GROWTH SECTION
+        ================================================== -->
+
+        <section
+            class="stackly-um-growth-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        >
+
+            <div class="stackly-um-growth-header">
+
+                <div>
+
+                    <span>
+                        COMMUNITY ANALYTICS
+                    </span>
+
+                    <h3>
+                        User growth overview
+                    </h3>
+
+                    <p>
+                        Track how your Stackly community has grown
+                        throughout the year.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-um-growth-total">
+
+                    <span>
+                        CURRENT USERS
+                    </span>
+
+                    <strong>
+                        1,248
+                    </strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Growing steadily
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOM BAR CHART -->
+
+            <div class="stackly-um-growth-chart">
+
+
+                <div class="stackly-um-chart-y">
+
+                    <span>1.4k</span>
+                    <span>1.1k</span>
+                    <span>800</span>
+                    <span>500</span>
+                    <span>200</span>
+
+                </div>
+
+
+                <div class="stackly-um-chart-area">
+
+                    <div class="stackly-um-grid-lines">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="stackly-um-bars">
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:38%;"
+                        >
+                            <span>Jan</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:43%;"
+                        >
+                            <span>Feb</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:49%;"
+                        >
+                            <span>Mar</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:55%;"
+                        >
+                            <span>Apr</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:61%;"
+                        >
+                            <span>May</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:65%;"
+                        >
+                            <span>Jun</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:71%;"
+                        >
+                            <span>Jul</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:77%;"
+                        >
+                            <span>Aug</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar active"
+                            style="height:89%;"
+                        >
+                            <span>Sep</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:82%;"
+                        >
+                            <span>Oct</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:86%;"
+                        >
+                            <span>Nov</span>
+                        </div>
+
+                        <div
+                            class="stackly-um-bar"
+                            style="height:92%;"
+                        >
+                            <span>Dec</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <section
+            class="stackly-um-actions-section"
+            data-aos="fade-up"
+            data-aos-duration="900"
+        >
+
+            <div class="stackly-um-actions-heading">
+
+                <span>
+                    ADMIN TOOLS
+                </span>
+
+                <h3>
+                    Quick actions
+                </h3>
+
+            </div>
+
+
+            <div class="stackly-um-action-grid">
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-um-action-card"
+                >
+
+                    <div class="stackly-um-action-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Add User
+                        </strong>
+
+                        <span>
+                            Create a new account
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-um-action-card"
+                >
+
+                    <div class="stackly-um-action-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Permissions
+                        </strong>
+
+                        <span>
+                            Manage user access
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-um-action-card"
+                >
+
+                    <div class="stackly-um-action-icon">
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Export Data
+                        </strong>
+
+                        <span>
+                            Download user records
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="admin-settings.html"
+                    class="stackly-um-action-card"
+                >
+
+                    <div class="stackly-um-action-icon">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            User Settings
+                        </strong>
+
+                        <span>
+                            Configure account rules
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    
+</main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>

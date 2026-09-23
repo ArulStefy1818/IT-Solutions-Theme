@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Stackly IT Solutions Client Dashboard for managing projects, services, messages and account information.">
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay">
+    </div>
+
+
+
+    <!-- =========================================================
+         CLIENT SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar">
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home">
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-close"
+                id="stacklyAdminClose"
+                aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CLIENT PROFILE
+        ====================================================== -->
+
+        <div
+            class="stackly-admin-profile"
+            data-aos="fade-right"
+            data-aos-duration="800">
+
+            <div class="stackly-admin-profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-admin-profile-info">
+
+                <h3>Client Account</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Active Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-admin-nav">
+
+            <div class="stackly-admin-nav-title">
+                CLIENT MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="client.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="client-projects.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    My Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="client-services.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="client-messages.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <!-- INVOICES -->
+
+            <a
+                href="client-invoices.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <!-- DOCUMENTS -->
+
+            <a
+                href="client-documents.html"
+                class="stackly-admin-nav-link active">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Documents
+                </span>
+
+            </a>
+
+ 
+
+            <!-- SETTINGS -->
+
+            <a
+                href="client-settings.html"
+                class="stackly-admin-nav-link">
+
+                <span class="stackly-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+ 
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="index.html"
+                class="stackly-admin-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-mobile-toggle"
+                id="stacklyAdminOpen"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-admin-header-title">
+
+                <span>
+                    CLIENT PORTAL
+                </span>
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="stackly-admin-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-admin-notification"
+                    aria-label="Messages">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- CLIENT EMAIL -->
+
+                <div class="stackly-admin-email">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-admin-email-info">
+
+                       <strong>
+            Client Account
+        </strong>
+
+        <span id="stacklyClientEmail">
+            Loading...
+        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+         
+    <!-- =====================================================
+         DOCUMENTS MAIN CONTENT
+    ====================================================== -->
+
+    <div class="stackly-documents-content">
+
+
+        <!-- =================================================
+             DOCUMENT HERO
+        ================================================== -->
+
+        <section
+            class="stackly-documents-hero"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-documents-hero-content">
+
+                <span class="stackly-documents-hero-label">
+
+                    <i class="fa-solid fa-folder-tree"></i>
+
+                    DOCUMENT CENTER
+
+                </span>
+
+                <h2>
+                    Everything you need,
+                    <span>in one secure place.</span>
+                </h2>
+
+                <p>
+                    Access project files, agreements, invoices,
+                    reports and other important documents shared
+                    by the Stackly team.
+                </p>
+
+
+                <div class="stackly-documents-hero-actions">
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-documents-primary-btn">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+
+                        Browse Documents
+
+                    </a>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-documents-outline-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Request a File
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="stackly-documents-hero-visual">
+
+                <div class="stackly-document-orbit orbit-one"></div>
+
+                <div class="stackly-document-orbit orbit-two"></div>
+
+                <div class="stackly-document-glow"></div>
+
+
+                <div class="stackly-document-folder-card">
+
+                    <div class="stackly-document-folder-icon">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+                    <strong>
+                        Client Vault
+                    </strong>
+
+                    <span>
+                        28 Documents
+                    </span>
+
+                    <div class="stackly-document-storage">
+
+                        <div class="stackly-document-storage-bar">
+
+                            <span></span>
+
+                        </div>
+
+                        <small>
+                            64% storage used
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DOCUMENT STATISTICS
+        ================================================== -->
+
+        <section class="stackly-document-metrics">
+
+            <div
+                class="stackly-document-metric-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
+
+                <div class="stackly-document-metric-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL FILES
+                    </span>
+
+                    <strong>
+                        28
+                    </strong>
+
+                    <small>
+                        All shared documents
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="stackly-document-metric-card"
+                data-aos="fade-up"
+                data-aos-delay="180">
+
+                <div class="stackly-document-metric-icon">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        APPROVED
+                    </span>
+
+                    <strong>
+                        21
+                    </strong>
+
+                    <small>
+                        Verified documents
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="stackly-document-metric-card"
+                data-aos="fade-up"
+                data-aos-delay="260">
+
+                <div class="stackly-document-metric-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        RECENT
+                    </span>
+
+                    <strong>
+                        06
+                    </strong>
+
+                    <small>
+                        Added this month
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="stackly-document-metric-card"
+                data-aos="fade-up"
+                data-aos-delay="340">
+
+                <div class="stackly-document-metric-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        SECURE
+                    </span>
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <small>
+                        Protected workspace
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DOCUMENT CATEGORY EXPLORER
+        ================================================== -->
+
+        <section
+            class="stackly-document-explorer"
+            data-aos="fade-up"
+            data-aos-duration="900">
+
+            <div class="stackly-document-section-heading">
+
+                <div>
+
+                    <span>
+                        EXPLORE FILES
+                    </span>
+
+                    <h2>
+                        Document categories
+                    </h2>
+
+                </div>
+
+                <a href="404-client.html">
+                    View all
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-document-category-grid">
+
+
+                <!-- PROJECT FILES -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-document-category-card">
+
+                    <div class="stackly-document-category-icon">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Project Files
+                        </h3>
+
+                        <p>
+                            Designs, specifications and project assets.
+                        </p>
+
+                        <span>
+                            12 Files
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+                <!-- CONTRACTS -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-document-category-card">
+
+                    <div class="stackly-document-category-icon">
+
+                        <i class="fa-solid fa-file-signature"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Contracts
+                        </h3>
+
+                        <p>
+                            Agreements, contracts and approvals.
+                        </p>
+
+                        <span>
+                            04 Files
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+                <!-- REPORTS -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-document-category-card">
+
+                    <div class="stackly-document-category-icon">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reports
+                        </h3>
+
+                        <p>
+                            Performance reports and project summaries.
+                        </p>
+
+                        <span>
+                            07 Files
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+                <!-- BRAND ASSETS -->
+
+                <a
+                    href="404-client.html"
+                    class="stackly-document-category-card">
+
+                    <div class="stackly-document-category-icon">
+
+                        <i class="fa-solid fa-palette"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Brand Assets
+                        </h3>
+
+                        <p>
+                            Logos, graphics and creative resources.
+                        </p>
+
+                        <span>
+                            05 Files
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT DOCUMENTS
+        ================================================== -->
+
+        <section
+            class="stackly-recent-files-section"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-document-section-heading">
+
+                <div>
+
+                    <span>
+                        RECENTLY ADDED
+                    </span>
+
+                    <h2>
+                        Latest documents
+                    </h2>
+
+                </div>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-document-filter-btn">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                    Filter
+
+                </a>
+
+            </div>
+
+
+            <div class="stackly-recent-files-list">
+
+
+                <!-- FILE 01 -->
+
+                <div class="stackly-file-record">
+
+                    <div class="stackly-file-type-icon pdf">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                    </div>
+
+                    <div class="stackly-file-details">
+
+                        <strong>
+                            Website Project Proposal.pdf
+                        </strong>
+
+                        <span>
+                            Project Files • 2.4 MB
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-file-date">
+                        Sep 18, 2026
+                    </span>
+
+                    <span class="stackly-file-status approved">
+                        Approved
+                    </span>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-file-action"
+                        aria-label="View document">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- FILE 02 -->
+
+                <div class="stackly-file-record">
+
+                    <div class="stackly-file-type-icon doc">
+
+                        <i class="fa-solid fa-file-word"></i>
+
+                    </div>
+
+                    <div class="stackly-file-details">
+
+                        <strong>
+                            Mobile App Requirements.docx
+                        </strong>
+
+                        <span>
+                            Project Files • 1.8 MB
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-file-date">
+                        Sep 15, 2026
+                    </span>
+
+                    <span class="stackly-file-status approved">
+                        Approved
+                    </span>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-file-action"
+                        aria-label="View document">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- FILE 03 -->
+
+                <div class="stackly-file-record">
+
+                    <div class="stackly-file-type-icon xls">
+
+                        <i class="fa-solid fa-file-excel"></i>
+
+                    </div>
+
+                    <div class="stackly-file-details">
+
+                        <strong>
+                            Marketing Performance Report.xlsx
+                        </strong>
+
+                        <span>
+                            Reports • 3.6 MB
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-file-date">
+                        Sep 12, 2026
+                    </span>
+
+                    <span class="stackly-file-status review">
+                        Review
+                    </span>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-file-action"
+                        aria-label="View document">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- FILE 04 -->
+
+                <div class="stackly-file-record">
+
+                    <div class="stackly-file-type-icon zip">
+
+                        <i class="fa-solid fa-file-zipper"></i>
+
+                    </div>
+
+                    <div class="stackly-file-details">
+
+                        <strong>
+                            Brand Assets Pack.zip
+                        </strong>
+
+                        <span>
+                            Brand Assets • 8.2 MB
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-file-date">
+                        Sep 08, 2026
+                    </span>
+
+                    <span class="stackly-file-status approved">
+                        Approved
+                    </span>
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-file-action"
+                        aria-label="View document">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             IMPORTANT DOCUMENTS
+        ================================================== -->
+
+        <section
+            class="stackly-important-documents"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-important-copy">
+
+                <span>
+                    ACTION REQUIRED
+                </span>
+
+                <h2>
+                    Keep your documents
+                    up to date.
+                </h2>
+
+                <p>
+                    A few documents may require your review,
+                    approval or updated information before
+                    the next project milestone.
+                </p>
+
+                <a
+                    href="404-client.html"
+                    class="stackly-important-btn">
+
+                    Review Documents
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="stackly-important-list">
+
+                <div class="stackly-important-item">
+
+                    <div class="stackly-important-icon">
+
+                        <i class="fa-solid fa-file-signature"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Service Agreement
+                        </strong>
+
+                        <span>
+                            Awaiting client approval
+                        </span>
+
+                    </div>
+
+                    <a href="404-client.html" class="stackly-important-link">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-important-item">
+
+                    <div class="stackly-important-icon">
+
+                        <i class="fa-solid fa-file-circle-exclamation"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Business Details
+                        </strong>
+
+                        <span>
+                            Information needs updating
+                        </span>
+
+                    </div>
+
+                   <a href="404-client.html" class="stackly-important-link">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-important-item">
+
+                    <div class="stackly-important-icon">
+
+                        <i class="fa-solid fa-calendar-xmark"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Project Brief
+                        </strong>
+
+                        <span>
+                            Review expires Sep 30
+                        </span>
+
+                    </div>
+
+                    <a href="404-client.html" class="stackly-important-link">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DOCUMENT ACTIVITY TIMELINE
+        ================================================== -->
+
+        <section
+            class="stackly-document-history"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-document-section-heading">
+
+                <div>
+
+                    <span>
+                        FILE ACTIVITY
+                    </span>
+
+                    <h2>
+                        Document history
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-document-timeline">
+
+
+                <div class="stackly-document-event">
+
+                    <div class="stackly-event-marker">
+
+                        <i class="fa-solid fa-upload"></i>
+
+                    </div>
+
+                    <div class="stackly-event-content">
+
+                        <strong>
+                            New document uploaded
+                        </strong>
+
+                        <p>
+                            Website Project Proposal.pdf was
+                            added to your project workspace.
+                        </p>
+
+                        <span>
+                            Today • 10:42 AM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-document-event">
+
+                    <div class="stackly-event-marker">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <div class="stackly-event-content">
+
+                        <strong>
+                            Document approved
+                        </strong>
+
+                        <p>
+                            Homepage Design Approval was
+                            marked as approved.
+                        </p>
+
+                        <span>
+                            Yesterday • 04:18 PM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-document-event">
+
+                    <div class="stackly-event-marker">
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </div>
+
+                    <div class="stackly-event-content">
+
+                        <strong>
+                            Document accessed
+                        </strong>
+
+                        <p>
+                            Marketing Performance Report.xlsx
+                            was downloaded.
+                        </p>
+
+                        <span>
+                            Sep 12, 2026 • 11:05 AM
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECURE DOCUMENT VAULT
+        ================================================== -->
+
+        <section
+            class="stackly-secure-vault"
+            data-aos="zoom-in"
+            data-aos-duration="1000">
+
+            <div class="stackly-vault-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div class="stackly-vault-content">
+
+                <span>
+                    SECURE CLIENT VAULT
+                </span>
+
+                <h2>
+                    Your files stay protected.
+                </h2>
+
+                <p>
+                    Important project documents are organized
+                    inside your private client workspace for
+                    easier access and safer collaboration.
+                </p>
+
+            </div>
+
+            <div class="stackly-vault-status">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <strong>
+                    Secure
+                </strong>
+
+                <span>
+                    Protected Workspace
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DOCUMENT REQUEST CTA
+        ================================================== -->
+
+        <section
+            class="stackly-document-request"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-document-request-icon">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            </div>
+
+            <div class="stackly-document-request-content">
+
+                <span>
+                    NEED SOMETHING ELSE?
+                </span>
+
+                <h2>
+                    Request or share a document.
+                </h2>
+
+                <p>
+                    Can't find the file you're looking for?
+                    Send a request to the Stackly team and
+                    we'll help you locate it.
+                </p>
+
+            </div>
+
+            <a
+                href="404-client.html"
+                class="stackly-document-request-btn">
+
+                Contact Team
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </div>
+
+
+
+</main>
+
+
+
+    <!-- =========================================================
+         AOS SCRIPT
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         ADMIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+   
+
+</body>

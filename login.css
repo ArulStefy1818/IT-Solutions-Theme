@@ -1,0 +1,1634 @@
+/* =========================================================
+   STACKLY IT SOLUTIONS
+   LOGIN + SIGN UP PAGE
+========================================================= */
+
+:root {
+
+    --stackly-it-black: #08090a;
+    --stackly-it-dark: #0d0f10;
+    --stackly-it-dark-2: #121416;
+
+    --stackly-it-orange: #ff9d00;
+    --stackly-it-orange-light: #ffbd32;
+    --stackly-it-yellow: #ffd21a;
+
+    --stackly-it-white: #ffffff;
+    --stackly-it-text: #f4f4f4;
+    --stackly-it-muted: #9a9da1;
+
+    --stackly-it-border: rgba(255,255,255,.10);
+
+    --stackly-it-transition: all .35s ease;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--stackly-it-text);
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255,157,0,.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255,210,26,.06),
+            transparent 30%
+        ),
+        var(--stackly-it-black);
+
+    overflow-x: hidden;
+
+}
+
+
+button,
+input {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    border: 0;
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.stackly-auth-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+}
+
+
+.stackly-auth-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .22;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+}
+
+
+.stackly-auth-glow {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: .12;
+
+    animation: stacklyAuthGlow 8s ease-in-out infinite alternate;
+
+}
+
+
+.stackly-auth-glow-one {
+
+    top: -180px;
+
+    left: -120px;
+
+    background: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-glow-two {
+
+    right: -160px;
+
+    bottom: -180px;
+
+    background: var(--stackly-it-yellow);
+
+    animation-delay: 2s;
+
+}
+
+
+@keyframes stacklyAuthGlow {
+
+    from {
+
+        transform: translate(0,0) scale(1);
+
+    }
+
+    to {
+
+        transform: translate(40px,30px) scale(1.12);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.stackly-auth-header {
+
+    width: 100%;
+
+    padding: 25px 5%;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+.stackly-auth-header-container {
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.stackly-auth-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+}
+
+
+.stackly-auth-logo img {
+
+    width: 145px;
+
+    height: auto;
+
+    display: block;
+
+    transition: var(--stackly-it-transition);
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(68%)
+        sepia(96%)
+        saturate(1798%)
+        hue-rotate(359deg)
+        brightness(103%)
+        contrast(103%);
+
+}
+
+
+.stackly-auth-logo:hover img {
+
+    transform: translateY(-2px);
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(68%)
+        sepia(96%)
+        saturate(2200%)
+        hue-rotate(359deg)
+        brightness(108%)
+        contrast(105%)
+        drop-shadow(
+            0 0 12px rgba(255, 157, 0, 0.55)
+        );
+
+}
+
+
+/* =========================================================
+   BACK HOME
+========================================================= */
+
+.stackly-auth-home-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 50px;
+
+    color: var(--stackly-it-text);
+
+    background: rgba(255,255,255,.035);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--stackly-it-transition);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.stackly-auth-home-btn i {
+
+    color: var(--stackly-it-orange);
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-home-btn:hover {
+
+    color: var(--stackly-it-black);
+
+    background: var(--stackly-it-orange);
+
+    border-color: var(--stackly-it-orange);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255,157,0,.18);
+
+}
+
+
+.stackly-auth-home-btn:hover i {
+
+    color: var(--stackly-it-black);
+
+    transform: translateX(-3px);
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.stackly-auth-main {
+
+    min-height: calc(100vh - 95px);
+
+    padding: 45px 5% 80px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.stackly-auth-wrapper {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 520px;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.stackly-auth-intro {
+
+    max-width: 650px;
+
+}
+
+
+.stackly-auth-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--stackly-it-orange);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.stackly-auth-label span {
+
+    width: 30px;
+
+    height: 2px;
+
+    background: var(--stackly-it-orange);
+
+    display: inline-block;
+
+}
+
+
+.stackly-auth-intro h1 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 6vw, 82px);
+
+    line-height: .98;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+
+    margin-bottom: 28px;
+
+}
+
+
+.stackly-auth-intro h1 span {
+
+    color: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-intro > p {
+
+    max-width: 590px;
+
+    color: var(--stackly-it-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.stackly-auth-features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.stackly-auth-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+}
+
+
+.stackly-auth-feature-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(255,157,0,.18);
+
+    background: rgba(255,157,0,.06);
+
+    border-radius: 12px;
+
+    color: var(--stackly-it-orange);
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-feature:hover
+.stackly-auth-feature-icon {
+
+    background: var(--stackly-it-orange);
+
+    color: var(--stackly-it-black);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(255,157,0,.15);
+
+}
+
+
+.stackly-auth-feature h3 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.stackly-auth-feature p {
+
+    color: var(--stackly-it-muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   AUTH CARD
+========================================================= */
+
+.stackly-auth-card {
+
+    position: relative;
+
+    padding: 38px;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.45);
+
+    backdrop-filter: blur(22px);
+
+    overflow: visible;
+
+}
+
+
+.stackly-auth-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+
+    left: 12%;
+
+    width: 76%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--stackly-it-orange),
+            transparent
+        );
+
+}
+
+
+.stackly-auth-card-header {
+
+    margin-bottom: 25px;
+
+}
+
+
+.stackly-auth-small-label {
+
+    color: var(--stackly-it-orange);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.stackly-auth-card-header h2 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 32px;
+
+    margin-top: 8px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.stackly-auth-card-header p {
+
+    color: var(--stackly-it-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.stackly-auth-switch {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    height: 52px;
+
+    padding: 4px;
+
+    margin-bottom: 27px;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 12px;
+
+    background: rgba(0,0,0,.25);
+
+}
+
+
+.stackly-auth-switch-btn {
+
+    position: relative;
+
+    z-index: 2;
+
+    background: transparent;
+
+    color: var(--stackly-it-muted);
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-switch-btn.active {
+
+    color: var(--stackly-it-black);
+
+}
+
+
+.stackly-auth-switch-slider {
+
+    position: absolute;
+
+    top: 4px;
+
+    left: 4px;
+
+    width: calc(50% - 4px);
+
+    height: calc(100% - 8px);
+
+    border-radius: 9px;
+
+    background: var(--stackly-it-orange);
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-switch-slider.signup {
+
+    transform: translateX(100%);
+
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.stackly-auth-form {
+
+    display: none;
+
+}
+
+
+.stackly-auth-form.active {
+
+    display: block;
+
+    animation: stacklyAuthFormIn .45s ease;
+
+}
+
+
+@keyframes stacklyAuthFormIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.stackly-auth-field {
+
+    margin-bottom: 17px;
+
+}
+
+
+.stackly-auth-field label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #d9d9d9;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.stackly-auth-field label i {
+
+    color: var(--stackly-it-orange);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.stackly-auth-input {
+
+    position: relative;
+
+}
+
+
+.stackly-auth-input > i {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777b80;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-input input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 48px 0 43px;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: rgba(0,0,0,.23);
+
+    color: var(--stackly-it-white);
+
+    font-size: 13px;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-input input::placeholder {
+
+    color: #666a6e;
+
+}
+
+
+.stackly-auth-input input:focus {
+
+    border-color: rgba(255,157,0,.65);
+
+    background: rgba(255,157,0,.035);
+
+    box-shadow:
+        0 0 0 3px rgba(255,157,0,.07);
+
+}
+
+
+.stackly-auth-input input:focus + .stackly-auth-eye {
+
+    color: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-input:focus-within > i {
+
+    color: var(--stackly-it-orange);
+
+}
+
+
+/* =========================================================
+   EYE
+========================================================= */
+
+.stackly-auth-eye {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #777b80;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-eye:hover {
+
+    color: var(--stackly-it-orange);
+
+    background: rgba(255,157,0,.08);
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.stackly-auth-dropdown {
+
+    position: relative;
+
+}
+
+
+.stackly-auth-dropdown-btn {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 11px;
+
+    background: rgba(0,0,0,.23);
+
+    color: #85898d;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-dropdown-btn i {
+
+    color: #777b80;
+
+    font-size: 11px;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-dropdown.open
+.stackly-auth-dropdown-btn {
+
+    border-color: rgba(255,157,0,.65);
+
+    box-shadow:
+        0 0 0 3px rgba(255,157,0,.07);
+
+}
+
+
+.stackly-auth-dropdown.open
+.stackly-auth-dropdown-btn i {
+
+    transform: rotate(180deg);
+
+    color: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-dropdown-menu {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: calc(100% + 8px);
+
+    z-index: 100;
+
+    padding: 7px;
+
+    border: 1px solid var(--stackly-it-border);
+
+    border-radius: 13px;
+
+    background: #17191b;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-dropdown.open
+.stackly-auth-dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.stackly-auth-role-option {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 11px;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: var(--stackly-it-text);
+
+    text-align: left;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-role-option:hover {
+
+    background: rgba(255,157,0,.09);
+
+}
+
+
+.stackly-auth-role-option > i {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 8px;
+
+    color: var(--stackly-it-orange);
+
+    background: rgba(255,157,0,.08);
+
+}
+
+
+.stackly-auth-role-option span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.stackly-auth-role-option strong {
+
+    font-size: 13px;
+
+}
+
+
+.stackly-auth-role-option small {
+
+    color: var(--stackly-it-muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.stackly-auth-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 5px 0 20px;
+
+}
+
+
+.stackly-auth-checkbox {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #999da1;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.stackly-auth-checkbox input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.stackly-auth-checkmark {
+
+    width: 17px;
+
+    height: 17px;
+
+    flex: 0 0 17px;
+
+    border: 1px solid #55595d;
+
+    border-radius: 4px;
+
+    background: rgba(0,0,0,.25);
+
+    display: grid;
+
+    place-items: center;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-checkbox input:checked
++ .stackly-auth-checkmark {
+
+    border-color: var(--stackly-it-orange);
+
+    background: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-checkbox input:checked
++ .stackly-auth-checkmark::after {
+
+    content: "\f00c";
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    color: var(--stackly-it-black);
+
+    font-size: 9px;
+
+}
+
+
+.stackly-auth-forgot {
+
+    color: var(--stackly-it-orange);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-forgot:hover {
+
+    color: var(--stackly-it-orange-light);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.stackly-auth-terms {
+
+    line-height: 1.6;
+
+    margin: 3px 0 18px;
+
+    align-items: flex-start;
+
+}
+
+
+.stackly-auth-terms a {
+
+    color: var(--stackly-it-orange);
+
+}
+
+
+.stackly-auth-terms a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.stackly-auth-status {
+
+    min-height: 0;
+
+    margin-bottom: 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.stackly-auth-status.error {
+
+    padding: 10px 12px;
+
+    margin-bottom: 14px;
+
+    border-radius: 8px;
+
+    color: #ff9a9a;
+
+    border: 1px solid rgba(255,80,80,.2);
+
+    background: rgba(255,80,80,.06);
+
+}
+
+
+.stackly-auth-status.success {
+
+    padding: 10px 12px;
+
+    margin-bottom: 14px;
+
+    border-radius: 8px;
+
+    color: #b9f5a9;
+
+    border: 1px solid rgba(100,220,80,.2);
+
+    background: rgba(100,220,80,.06);
+
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.stackly-auth-submit {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 11px;
+
+    color: var(--stackly-it-black);
+
+    background: var(--stackly-it-orange);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-submit i {
+
+    transition: var(--stackly-it-transition);
+
+}
+
+
+.stackly-auth-submit:hover {
+
+    background: var(--stackly-it-orange-light);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(255,157,0,.18);
+
+}
+
+
+.stackly-auth-submit:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   BOTTOM SWITCH
+========================================================= */
+
+.stackly-auth-bottom {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #777b80;
+
+    font-size: 11px;
+
+}
+
+
+.stackly-auth-bottom button {
+
+    margin-left: 4px;
+
+    color: var(--stackly-it-orange);
+
+    background: transparent;
+
+    font-weight: 700;
+
+}
+
+
+.stackly-auth-bottom button:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .stackly-auth-wrapper {
+
+        grid-template-columns: 1fr 480px;
+
+        gap: 50px;
+
+    }
+
+
+    .stackly-auth-intro h1 {
+
+        font-size: 58px;
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .stackly-auth-main {
+
+        padding-top: 30px;
+
+    }
+
+
+    .stackly-auth-wrapper {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 50px;
+
+    }
+
+
+    .stackly-auth-intro {
+
+        max-width: 600px;
+
+        text-align: center;
+
+        margin: auto;
+
+    }
+
+
+    .stackly-auth-label {
+
+        justify-content: center;
+
+    }
+
+
+    .stackly-auth-intro > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .stackly-auth-features {
+
+        text-align: left;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stackly-auth-header {
+
+        padding: 20px 5%;
+
+    }
+
+
+    .stackly-auth-logo img {
+
+        width: 125px;
+
+    }
+
+
+    .stackly-auth-home-btn {
+
+        padding: 10px 14px;
+
+        font-size: 11px;
+
+    }
+
+
+    .stackly-auth-home-btn span {
+
+        display: none;
+
+    }
+
+
+    .stackly-auth-main {
+
+        padding: 20px 5% 60px;
+
+    }
+
+
+    .stackly-auth-intro h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .stackly-auth-intro > p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .stackly-auth-feature p {
+
+        font-size: 12px;
+
+    }
+
+
+    .stackly-auth-card {
+
+        padding: 25px 20px;
+
+        border-radius: 19px;
+
+    }
+
+
+    .stackly-auth-card-header h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .stackly-auth-options {
+
+        align-items: flex-start;
+
+    }
+
+
+    .stackly-auth-forgot {
+
+        text-align: right;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .stackly-auth-intro h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .stackly-auth-card {
+
+        padding: 22px 16px;
+
+    }
+
+
+    .stackly-auth-switch {
+
+        height: 48px;
+
+    }
+
+}

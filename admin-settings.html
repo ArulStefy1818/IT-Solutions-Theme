@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Settings"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Settings</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+                <span>
+                    ADMINISTRATOR
+                </span>
+
+                <strong id="stacklyAdminUserName">
+                    Stackly Admin
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>
+                    Projects
+                </span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>
+                    Services
+                </span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Analytics
+                </span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>
+                            LOGGED IN AS
+                        </span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             SETTINGS CONTENT
+        ================================================== -->
+
+        <div class="stackly-admin-content">
+
+
+            <!-- =================================================
+                 WELCOME SETTINGS BANNER
+            ================================================== -->
+
+            <section
+                class="stackly-admin-welcome"
+                data-aos="fade-up"
+                data-aos-duration="900"
+            >
+
+                <div class="stackly-admin-welcome-content">
+
+                    <span>
+                        SYSTEM SETTINGS
+                    </span>
+
+                    <h2>
+                        Manage your
+                        <strong>workspace preferences.</strong>
+                    </h2>
+
+                    <p>
+                        Configure your account, notifications,
+                        security and dashboard preferences
+                        from one convenient place.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-admin-welcome-icon">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS CARDS
+            ================================================== -->
+
+            <section class="stackly-admin-stats-grid">
+
+
+                <!-- ACCOUNT -->
+
+                <article
+                    class="stackly-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                >
+
+                    <div class="stackly-admin-stat-top">
+
+                        <div class="stackly-admin-stat-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <span class="stackly-admin-stat-growth">
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-admin-stat-label">
+                        ACCOUNT SETTINGS
+                    </span>
+
+                    <h3>
+                        Profile
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Manage administrator details
+                    </p>
+
+                </article>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <article
+                    class="stackly-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stackly-admin-stat-top">
+
+                        <div class="stackly-admin-stat-icon">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                        </div>
+
+                        <span class="stackly-admin-stat-growth">
+                            ON
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-admin-stat-label">
+                        NOTIFICATIONS
+                    </span>
+
+                    <h3>
+                        Alerts
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-check"></i>
+                        Email notifications enabled
+                    </p>
+
+                </article>
+
+
+                <!-- SECURITY -->
+
+                <article
+                    class="stackly-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                >
+
+                    <div class="stackly-admin-stat-top">
+
+                        <div class="stackly-admin-stat-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <span class="stackly-admin-stat-growth">
+                            SECURE
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-admin-stat-label">
+                        SECURITY
+                    </span>
+
+                    <h3>
+                        Protected
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-check"></i>
+                        Account security active
+                    </p>
+
+                </article>
+
+
+                <!-- APPEARANCE -->
+
+                <article
+                    class="stackly-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="stackly-admin-stat-top">
+
+                        <div class="stackly-admin-stat-icon">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+                        <span class="stackly-admin-stat-growth">
+                            DARK
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-admin-stat-label">
+                        APPEARANCE
+                    </span>
+
+                    <h3>
+                        Interface
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-moon"></i>
+                        Dark interface selected
+                    </p>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 GENERAL PREFERENCES
+            ================================================== -->
+
+            <section
+                class="stackly-admin-dashboard-grid"
+                data-aos="fade-up"
+                data-aos-duration="900"
+            >
+
+
+                <!-- =================================================
+                     PREFERENCE PANEL
+                ================================================== -->
+
+                <div class="stackly-admin-panel">
+
+
+                    <div class="stackly-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                PREFERENCES
+                            </span>
+
+                            <h3>
+                                General Preferences
+                            </h3>
+
+                        </div>
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                    </div>
+
+
+                    <!-- OPTION 01 -->
+
+                    <div class="stackly-admin-project-list">
+
+                        <div class="stackly-admin-project-item">
+
+                            <div class="stackly-admin-project-info">
+
+                                <div class="stackly-admin-project-icon">
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Email Updates
+                                    </h4>
+
+                                    <span>
+                                        Receive important account updates
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <label class="stackly-settings-switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- OPTION 02 -->
+
+                        <div class="stackly-admin-project-item">
+
+                            <div class="stackly-admin-project-info">
+
+                                <div class="stackly-admin-project-icon">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Weekly Reports
+                                    </h4>
+
+                                    <span>
+                                        Receive weekly dashboard summaries
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <label class="stackly-settings-switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- OPTION 03 -->
+
+                        <div class="stackly-admin-project-item">
+
+                            <div class="stackly-admin-project-info">
+
+                                <div class="stackly-admin-project-icon">
+
+                                    <i class="fa-solid fa-bell"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        System Notifications
+                                    </h4>
+
+                                    <span>
+                                        Receive important system alerts
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <label class="stackly-settings-switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- OPTION 04 -->
+
+                        <div class="stackly-admin-project-item">
+
+                            <div class="stackly-admin-project-info">
+
+                                <div class="stackly-admin-project-icon">
+
+                                    <i class="fa-solid fa-moon"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Dark Interface
+                                    </h4>
+
+                                    <span>
+                                        Use the dark dashboard interface
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <label class="stackly-settings-switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SYSTEM INFORMATION
+                ================================================== -->
+
+                <div
+                    class="stackly-admin-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                >
+
+
+                    <div class="stackly-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                SYSTEM
+                            </span>
+
+                            <h3>
+                                System Information
+                            </h3>
+
+                        </div>
+
+                        <i class="fa-solid fa-server"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-activity-list">
+
+
+                        <!-- VERSION -->
+
+                        <div class="stackly-admin-activity-item">
+
+                            <div class="stackly-admin-activity-icon">
+
+                                <i class="fa-solid fa-code-branch"></i>
+
+                            </div>
+
+                            <div class="stackly-admin-activity-content">
+
+                                <p>
+                                    Dashboard Version
+                                </p>
+
+                                <span>
+                                    Stackly Admin v2.4.0
+                                </span>
+
+                                <small>
+                                    Current version
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PLATFORM -->
+
+                        <div class="stackly-admin-activity-item">
+
+                            <div class="stackly-admin-activity-icon">
+
+                                <i class="fa-solid fa-server"></i>
+
+                            </div>
+
+                            <div class="stackly-admin-activity-content">
+
+                                <p>
+                                    Platform
+                                </p>
+
+                                <span>
+                                    Stackly IT Solutions
+                                </span>
+
+                                <small>
+                                    Administration platform
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- UPDATE -->
+
+                        <div class="stackly-admin-activity-item">
+
+                            <div class="stackly-admin-activity-icon">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                            <div class="stackly-admin-activity-content">
+
+                                <p>
+                                    Last Updated
+                                </p>
+
+                                <span>
+                                    September 2026
+                                </span>
+
+                                <small>
+                                    Latest system update
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div class="stackly-admin-activity-item">
+
+                            <div class="stackly-admin-activity-icon">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <div class="stackly-admin-activity-content">
+
+                                <p>
+                                    System Status
+                                </p>
+
+                                <span>
+                                    All systems operational
+                                </span>
+
+                                <small>
+                                    Services running normally
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SECURITY & ACCOUNT
+            ================================================== -->
+
+            <section
+                class="stackly-admin-quick-section"
+                data-aos="fade-up"
+                data-aos-duration="900"
+            >
+
+
+                <div class="stackly-admin-section-heading">
+
+                    <div>
+
+                        <span>
+                            MANAGEMENT
+                        </span>
+
+                        <h3>
+                            Account & Security
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-admin-quick-grid">
+
+
+                    <!-- PROFILE -->
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-admin-quick-card"
+                    >
+
+                        <div>
+
+                            <i class="fa-solid fa-user-gear"></i>
+
+                        </div>
+
+                        <span>
+                            Account Profile
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- PASSWORD -->
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-admin-quick-card"
+                    >
+
+                        <div>
+
+                            <i class="fa-solid fa-key"></i>
+
+                        </div>
+
+                        <span>
+                            Change Password
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- SECURITY -->
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-admin-quick-card"
+                    >
+
+                        <div>
+
+                            <i class="fa-solid fa-shield"></i>
+
+                        </div>
+
+                        <span>
+                            Security Center
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-admin-quick-card"
+                    >
+
+                        <div>
+
+                            <i class="fa-solid fa-bell"></i>
+
+                        </div>
+
+                        <span>
+                            Notification Center
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>

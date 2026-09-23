@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly IT Solutions Admin Dashboard"
+    >
+
+    <meta
+        name="author"
+        content="Stackly IT Solutions"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090a"
+    >
+
+    <title>Stackly | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="stackly-admin-overlay"
+        id="stacklyAdminOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="stackly-admin-sidebar"
+        id="stacklyAdminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-top">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-logo"
+                aria-label="Stackly IT Solutions Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly IT Solutions Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-close"
+                id="stacklyAdminMenuClose"
+                aria-label="Close navigation menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR ADMIN PROFILE
+        ================================================== -->
+
+        <div class="stackly-admin-profile">
+
+
+            <div class="stackly-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="stackly-admin-profile-content">
+
+    <span>ADMINISTRATOR</span>
+
+    <strong id="stacklyAdminUserName">
+        Stackly Admin
+    </strong>
+
+</div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="stackly-admin-nav"
+            aria-label="Admin Dashboard Navigation"
+        >
+
+
+            <div class="stackly-admin-nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="admin.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- USERS -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="admin-projects.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </span>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <!-- SERVICES -->
+
+            <a
+                href="admin-services.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </span>
+
+                <span>Services</span>
+
+            </a>
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-admin-nav-link active"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>Messages</span>
+
+                <span class="stackly-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="stackly-admin-nav-label">
+                MANAGEMENT
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="admin-analytics.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <!-- REPORTS -->
+
+            <a
+                href="admin-reports.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-admin-nav-link"
+            >
+
+                <span class="stackly-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-admin-sidebar-bottom">
+
+            <!-- LOGOUT -->
+
+            <a
+                href="login.html"
+                class="stackly-admin-logout"
+                id="stacklyAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="stackly-admin-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-admin-header">
+
+
+            <!-- MOBILE HAMBURGER -->
+
+            <button
+                type="button"
+                class="stackly-admin-menu-toggle"
+                id="stacklyAdminMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER LEFT -->
+
+            <div
+                class="stackly-admin-header-title"
+                data-aos="fade-right"
+                data-aos-duration="800"
+            >
+
+                <span class="stackly-admin-header-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div
+                class="stackly-admin-header-right"
+                data-aos="fade-left"
+                data-aos-duration="800"
+            >
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button></a>
+
+
+                <!-- ADMIN EMAIL -->
+
+                <div class="stackly-admin-email-box">
+
+
+                    <div class="stackly-admin-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="stackly-admin-email-content">
+
+                        <span>LOGGED IN AS</span>
+
+                        <strong>
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down stackly-admin-email-arrow"
+                    ></i>
+
+                </div>
+
+            </div>
+
+        </header>
+<!-- =========================================================
+     STACKLY IT SOLUTIONS - MESSAGES PAGE CONTENT
+     EXTRA SECTIONS / UNIQUE DESIGN
+========================================================= -->
+
+<!-- =========================================================
+     1. MESSAGE PAGE HERO
+========================================================= -->
+
+<section class="stackly-msg-hero-section">
+
+    <div class="stackly-msg-hero-glow stackly-msg-glow-one"></div>
+    <div class="stackly-msg-hero-glow stackly-msg-glow-two"></div>
+
+    <div class="stackly-msg-hero-content"
+         data-aos="fade-up"
+         data-aos-duration="900">
+
+        <div class="stackly-msg-hero-badge">
+            <i class="fa-solid fa-inbox"></i>
+            <span>MESSAGE CENTER</span>
+        </div>
+
+        <h2>
+            Stay connected with
+            <span>your clients.</span>
+        </h2>
+
+        <p>
+            Manage conversations, respond to enquiries and keep
+            every important client interaction organized in one place.
+        </p>
+
+    </div>
+
+    <div class="stackly-msg-hero-visual"
+         data-aos="zoom-in"
+         data-aos-duration="1000">
+
+        <div class="stackly-msg-orbit"></div>
+
+        <div class="stackly-msg-mail-icon">
+            <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+
+        <div class="stackly-msg-floating-card msg-float-one">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>New Message</span>
+        </div>
+
+        <div class="stackly-msg-floating-card msg-float-two">
+            <i class="fa-solid fa-check"></i>
+            <span>Replied</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     2. MESSAGE OVERVIEW STATISTICS
+========================================================= -->
+
+<section class="stackly-msg-stat-section">
+
+    <div class="stackly-msg-section-heading"
+         data-aos="fade-up">
+
+        <span>MESSAGE OVERVIEW</span>
+
+        <h3>
+            Your communication at a glance
+        </h3>
+
+    </div>
+
+
+    <div class="stackly-msg-stat-grid">
+
+        <!-- CARD 1 -->
+
+        <div class="stackly-msg-stat-card"
+             data-aos="fade-up"
+             data-aos-delay="100">
+
+            <div class="stackly-msg-stat-top">
+
+                <div class="stackly-msg-stat-icon">
+                    <i class="fa-solid fa-inbox"></i>
+                </div>
+
+                <span class="stackly-msg-stat-status">
+                    +12%
+                </span>
+
+            </div>
+
+            <strong>128</strong>
+
+            <span>Total Messages</span>
+
+            <div class="stackly-msg-stat-line">
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="stackly-msg-stat-card"
+             data-aos="fade-up"
+             data-aos-delay="180">
+
+            <div class="stackly-msg-stat-top">
+
+                <div class="stackly-msg-stat-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <span class="stackly-msg-stat-status">
+                    NEW
+                </span>
+
+            </div>
+
+            <strong>24</strong>
+
+            <span>Unread Messages</span>
+
+            <div class="stackly-msg-stat-line">
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="stackly-msg-stat-card"
+             data-aos="fade-up"
+             data-aos-delay="260">
+
+            <div class="stackly-msg-stat-top">
+
+                <div class="stackly-msg-stat-icon">
+                    <i class="fa-solid fa-reply"></i>
+                </div>
+
+                <span class="stackly-msg-stat-status">
+                    92%
+                </span>
+
+            </div>
+
+            <strong>104</strong>
+
+            <span>Replied Messages</span>
+
+            <div class="stackly-msg-stat-line">
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="stackly-msg-stat-card"
+             data-aos="fade-up"
+             data-aos-delay="340">
+
+            <div class="stackly-msg-stat-top">
+
+                <div class="stackly-msg-stat-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <span class="stackly-msg-stat-status">
+                    FAST
+                </span>
+
+            </div>
+
+            <strong>2.4h</strong>
+
+            <span>Average Response</span>
+
+            <div class="stackly-msg-stat-line">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     3. PRIORITY MESSAGE PANEL
+========================================================= -->
+
+<section class="stackly-msg-priority-section">
+
+    <div class="stackly-msg-priority-header"
+         data-aos="fade-right">
+
+        <div>
+
+            <span class="stackly-msg-small-label">
+                PRIORITY INBOX
+            </span>
+
+            <h3>
+                Messages that need your attention
+            </h3>
+
+        </div>
+
+        <a href="404-admin.html"
+           class="stackly-msg-view-all">
+            View All
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-msg-priority-grid">
+
+
+        <!-- PRIORITY MESSAGE 1 -->
+
+        <article class="stackly-msg-priority-card"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+            <div class="stackly-msg-priority-top">
+
+                <div class="stackly-msg-avatar">
+                    AR
+                </div>
+
+                <div class="stackly-msg-person">
+
+                    <strong>
+                        Arun <br>Raj
+                    </strong>
+
+                    <span>
+                        Project Enquiry
+                    </span>
+
+                </div>
+
+                <span class="stackly-msg-priority-tag">
+                    HIGH
+                </span>
+
+            </div>
+
+
+            <p>
+                We would like to discuss the next phase of our
+                website development project.
+            </p>
+
+
+            <div class="stackly-msg-priority-footer">
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    18 min ago
+                </span>
+
+                <a href="404-admin.html">
+                    Open
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRIORITY MESSAGE 2 -->
+
+        <article class="stackly-msg-priority-card"
+                 data-aos="fade-up"
+                 data-aos-delay="180">
+
+            <div class="stackly-msg-priority-top">
+
+                <div class="stackly-msg-avatar">
+                    SM
+                </div>
+
+                <div class="stackly-msg-person">
+
+                    <strong>
+                        Sarah Mathew
+                    </strong>
+
+                    <span>
+                        Service Request
+                    </span>
+
+                </div>
+
+                <span class="stackly-msg-priority-tag">
+                    NEW
+                </span>
+
+            </div>
+
+
+            <p>
+                Please share the estimated timeline and
+                requirements for the mobile application.
+            </p>
+
+
+            <div class="stackly-msg-priority-footer">
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    42 min ago
+                </span>
+
+                <a href="404-admin.html">
+                    Open
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRIORITY MESSAGE 3 -->
+
+        <article class="stackly-msg-priority-card"
+                 data-aos="fade-up"
+                 data-aos-delay="260">
+
+            <div class="stackly-msg-priority-top">
+
+                <div class="stackly-msg-avatar">
+                    VK
+                </div>
+
+                <div class="stackly-msg-person">
+
+                    <strong>
+                        Vikram Kumar
+                    </strong>
+
+                    <span>
+                        Strategic Partnerships
+                    </span>
+
+                </div>
+
+                <span class="stackly-msg-priority-tag">
+                    FOLLOW UP
+                </span>
+
+            </div>
+
+
+            <p>
+                Following up regarding our conversation about the transformation proposal.
+            </p>
+
+
+            <div class="stackly-msg-priority-footer">
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    1 hr ago
+                </span>
+
+                <a href="404-admin.html">
+                    Open
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     4. COMMUNICATION ACTIVITY
+========================================================= -->
+
+<section class="stackly-msg-activity-section">
+
+    <div class="stackly-msg-activity-heading"
+         data-aos="fade-up">
+
+        <span>
+            COMMUNICATION ACTIVITY
+        </span>
+
+        <h3>
+            Recent message activity
+        </h3>
+
+    </div>
+
+
+    <div class="stackly-msg-activity-layout">
+
+
+        <!-- TIMELINE -->
+
+        <div class="stackly-msg-timeline"
+             data-aos="fade-right">
+
+
+            <div class="stackly-msg-timeline-item">
+
+                <div class="stackly-msg-time-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="stackly-msg-time-content">
+
+                    <strong>
+                        New enquiry received
+                    </strong>
+
+                    <p>
+                        A new website development enquiry
+                        was submitted.
+                    </p>
+
+                    <span>
+                        Today · 10:42 AM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-msg-timeline-item">
+
+                <div class="stackly-msg-time-icon">
+                    <i class="fa-solid fa-reply"></i>
+                </div>
+
+                <div class="stackly-msg-time-content">
+
+                    <strong>
+                        Message replied
+                    </strong>
+
+                    <p>
+                        Client communication was successfully
+                        responded to.
+                    </p>
+
+                    <span>
+                        Today · 09:18 AM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-msg-timeline-item">
+
+                <div class="stackly-msg-time-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <div class="stackly-msg-time-content">
+
+                    <strong>
+                        New client conversation
+                    </strong>
+
+                    <p>
+                        A new conversation was added to
+                        the communication center.
+                    </p>
+
+                    <span>
+                        Yesterday · 05:26 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESPONSE PERFORMANCE -->
+
+        <div class="stackly-msg-performance-card"
+             data-aos="fade-left">
+
+            <div class="stackly-msg-performance-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+            <span>
+                RESPONSE PERFORMANCE
+            </span>
+
+            <h4>
+                92%
+            </h4>
+
+            <p>
+                Messages are currently being handled
+                within the expected response window.
+            </p>
+
+
+            <div class="stackly-msg-performance-progress">
+
+                <span></span>
+
+            </div>
+
+
+            <div class="stackly-msg-performance-meta">
+
+                <span>
+                    Response efficiency
+                </span>
+
+                <strong>
+                    Excellent
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     5. MESSAGE CATEGORIES
+========================================================= -->
+
+<section class="stackly-msg-category-section">
+
+    <div class="stackly-msg-category-heading"
+         data-aos="fade-up">
+
+        <span>
+            MESSAGE CATEGORIES
+        </span>
+
+        <h3>
+            Organize conversations by purpose
+        </h3>
+
+    </div>
+
+
+    <div class="stackly-msg-category-grid">
+
+
+        <a href="404-admin.html"
+           class="stackly-msg-category-card"
+           data-aos="zoom-in"
+           data-aos-delay="100">
+
+            <div class="stackly-msg-category-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div>
+                <strong>Project Enquiries</strong>
+                <span>38 conversations</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right stackly-msg-category-arrow"></i>
+
+        </a>
+
+
+        <a href="404-admin.html"
+           class="stackly-msg-category-card"
+           data-aos="zoom-in"
+           data-aos-delay="180">
+
+            <div class="stackly-msg-category-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+                <strong>Support Requests</strong>
+                <span>26 conversations</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right stackly-msg-category-arrow"></i>
+
+        </a>
+
+
+        <a href="404-admin.html"
+           class="stackly-msg-category-card"
+           data-aos="zoom-in"
+           data-aos-delay="260">
+
+            <div class="stackly-msg-category-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div>
+                <strong>Partnerships</strong>
+                <span>18 conversations</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right stackly-msg-category-arrow"></i>
+
+        </a>
+
+
+        <a href="404-admin.html"
+           class="stackly-msg-category-card"
+           data-aos="zoom-in"
+           data-aos-delay="340">
+
+            <div class="stackly-msg-category-icon">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+
+            <div>
+                <strong>General Questions</strong>
+                <span>46 conversations</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right stackly-msg-category-arrow"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     6. QUICK RESPONSE CTA
+========================================================= -->
+
+<section class="stackly-msg-cta-section"
+         data-aos="fade-up"
+         data-aos-duration="1000">
+
+    <div class="stackly-msg-cta-content">
+
+        <div class="stackly-msg-cta-icon">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </div>
+
+        <div>
+
+            <span>
+                COMMUNICATION CENTER
+            </span>
+
+            <h3>
+                Keep every conversation moving forward.
+            </h3>
+
+            <p>
+                Review enquiries, manage responses and
+                maintain stronger client relationships.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <a href="404-admin.html"
+       class="stackly-msg-cta-button">
+
+        Open Inbox
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+    
+</main>
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =====================================================
+         ADMIN JS
+    ====================================================== -->
+
+    <script src="admin.js"></script>
+
+
+</body>
+
+</html>
